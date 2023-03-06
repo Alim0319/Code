@@ -1,0 +1,124 @@
+body {
+  display: block;
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.search {
+  background-color: white;
+
+  border: 4px solid rgb(239, 236, 236);
+  padding: 7px 20px;
+  font-size: 16px;
+  float: right;
+  border-radius: 20px;
+}
+.logo {
+  background-color: aqua;
+}
+
+.contact {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 4px solid rgb(239, 236, 236);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 7px 20px;
+  font-size: 16px;
+  float: right;
+  border-radius: 20px;
+}
+.test-automation {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 4px solid rgb(239, 236, 236);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 7px 20px;
+  font-size: 16px;
+  float: right;
+  border-radius: 20px;
+}
+.project {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 4px solid rgb(239, 236, 236);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 7px 20px;
+  font-size: 16px;
+  float: right;
+  border-radius: 20px;
+}
+.service {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 4px solid rgb(239, 236, 236);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 7px 20px;
+  font-size: 16px;
+  float: right;
+  border-radius: 20px;
+}
+.about {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 4px solid rgb(239, 236, 236);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 7px 20px;
+  font-size: 16px;
+  float: right;
+  border-radius: 20px;
+}
+.Welcome {
+  background-color: rgb(205, 239, 238);
+  margin-top: 1px;
+  border-top: 10px;
+  border-bottom: 10px;
+  border-left: 10px;
+  border-right: auto;
+  border-radius: 20px;
+  font-style: oblique;
+}
+.item {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1235px;
+  height: 750x;
+  background-color: whitesmoke;
+  border: 4px solid rgb(239, 236, 236);
+
+  border-radius: 20px;
+}
+.About-me {
+  background-color: rgb(205, 239, 238);
+  margin-top: 1px;
+  border-top: 10px;
+  border-bottom: 10px;
+  border-left: 10px;
+  border-right: auto;
+  border-radius: 20px;
+  font-style: oblique;
+}
