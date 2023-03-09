@@ -1,0 +1,16 @@
+.blue {
+  background: rgb(30, 30, 162);
+  height: 1000px;
+}
+
+.img {
+  color: #f8f6f6;
+  height: 350px;
+}
+
+.card {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+}

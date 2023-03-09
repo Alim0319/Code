@@ -1,28 +1,31 @@
 body {
-  display: block;
-  margin-top: 40px;
   margin-left: 100px;
   margin-right: 100px;
+}
+.nav-bar {
+  margin-top: 20px;
+  background-color: #caf9ff;
 }
 
 .search {
   background-color: white;
+  background-image: url(./images/serch\ icon\ svg.gif);
+  background-position: left;
 
-  border: 4px solid rgb(239, 236, 236);
+  background-size: 40px;
+  background-repeat: no-repeat;
+
+  border: 4px soid #caf9ff;
   padding: 7px 20px;
   font-size: 16px;
   float: right;
   border-radius: 20px;
 }
-.logo {
-  background-color: aqua;
-}
-
 .contact {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  border: 4px solid rgb(239, 236, 236);
+  background-color: #caf9ff;
+  border: 4px solid #caf9ff;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -35,8 +38,8 @@ body {
 .test-automation {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  border: 4px solid rgb(239, 236, 236);
+  background-color: #caf9ff;
+  border: 4px solid #caf9ff;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -45,12 +48,16 @@ body {
   font-size: 16px;
   float: right;
   border-radius: 20px;
+  background-image: url(./images/Dropdown-SVG-Icon-0sfe.png);
+  background-position: right;
+  background-size: 18px;
+  background-repeat: no-repeat;
 }
 .project {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  border: 4px solid rgb(239, 236, 236);
+  background-color: #caf9ff;
+  border: 4px solid #caf9ff;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -63,8 +70,8 @@ body {
 .service {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  border: 4px solid rgb(239, 236, 236);
+  background-color: #caf9ff;
+  border: 4px solid #caf9ff;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -74,11 +81,17 @@ body {
   float: right;
   border-radius: 20px;
 }
+
 .about {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  border: 4px solid rgb(239, 236, 236);
+  background-color: #caf9ff;
+  background-image: url(./images/Dropdown-SVG-Icon-0sfe.png);
+  background-position: right;
+  background-size: 18px;
+  background-repeat: no-repeat;
+
+  border: 4px solid #caf9ff;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -88,32 +101,23 @@ body {
   float: right;
   border-radius: 20px;
 }
+
 .Welcome {
-  background-color: rgb(205, 239, 238);
-  margin-top: 1px;
-  border-top: 10px;
-  border-bottom: 10px;
-  border-left: 10px;
-  border-right: auto;
-  border-radius: 20px;
-  font-style: oblique;
-}
-.item {
-  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: auto;
-  display: flex;
-  flex-wrap: wrap;
-  width: 1235px;
-  height: 750x;
-  background-color: whitesmoke;
-  border: 4px solid rgb(239, 236, 236);
+  background-color: #caf9ff;
+  margin-top: auto;
+  border-top: 10px;
+  border-bottom: 10px;
+  border-left: 10px;
+  border-right: 10px;
 
-  border-radius: 20px;
+  font-style: oblique;
 }
 .About-me {
-  background-color: rgb(205, 239, 238);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #caf9ff;
   margin-top: 1px;
   border-top: 10px;
   border-bottom: 10px;
@@ -121,4 +125,30 @@ body {
   border-right: auto;
   border-radius: 20px;
   font-style: oblique;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.flex-side {
+  display: flex;
+}
+.flex-left {
+  background-color: #caf9ff;
+  margin-top: 0px;
+  height: 885px;
+  width: 10.5%;
+}
+.flex-right {
+  background-color: rgb(240, 234, 234);
+  margin-top: 0px;
+  height: 885px;
+  width: 89.5%;
+  text-align: justify;
+  image-rendering: auto;
+  background-image: url(./images/logo-no-background.png);
 }
