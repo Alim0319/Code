@@ -127,11 +127,14 @@ body {
   font-style: oblique;
 }
 
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
+.flex-bottom{
+  display: flex;
+  background-color: #a9a7a7;
+ height: 80px;
+ width: 100%;
+ 
   color: white;
+  
 }
 
 .flex-side {
@@ -140,15 +143,30 @@ footer {
 .flex-left {
   background-color: #caf9ff;
   margin-top: 0px;
-  height: 885px;
+  height: 1000px;
   width: 10.5%;
 }
 .flex-right {
   background-color: rgb(240, 234, 234);
   margin-top: 0px;
-  height: 885px;
+  height: 1000px;
   width: 89.5%;
   text-align: justify;
   image-rendering: auto;
   background-image: url(./images/logo-no-background.png);
+}
+.LinkId{
+  height: 50px;
+  width: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-position: right;
+  margin-left: 90%;
+ 
+
+}
+.Fellow{
+  text-align: right;
 }
