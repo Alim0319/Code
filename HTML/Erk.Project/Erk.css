@@ -134,7 +134,6 @@ body {
   width: 100%;
   justify-content: flex-end;
   color: white;
-  
 }
 
 .flex-side {
@@ -162,18 +161,46 @@ body {
   padding-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
-  
-  
 }
-.Github{
+.Github {
   height: 50px;
   width: 50px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
-
 }
 .Fellow {
   text-align: right;
+}
+ul {
+  list-style-type: none;
+  margin-top: 15%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li a {
+  display: block;
+  padding: 20px 8px;
+  text-decoration: none;
+}
+li {
+  text-align: center;
+  font-style: inherit;
+}
+li a:hover {
+  background-color: #bbdbdf;
+  color: rebeccapurple;
+}
+.test {
+  margin-top: 10%;
+  text-align: center;
+}
+.text {
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 18px;
+  justify-content: center;
 }
