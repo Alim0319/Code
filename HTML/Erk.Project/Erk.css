@@ -114,19 +114,6 @@ body {
 
   font-style: oblique;
 }
-.About-me {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #caf9ff;
-  margin-top: 1px;
-  border-top: 10px;
-  border-bottom: 10px;
-  border-left: 10px;
-  border-right: auto;
-  border-radius: 20px;
-  font-style: oblique;
-}
-
 .flex-bottom {
   display: flex;
   background-color: #a9a7a7;
@@ -144,6 +131,24 @@ body {
   margin-top: 0px;
   height: 1000px;
   width: 10.5%;
+}
+.sidebar-imeg {
+  vertical-align: middle;
+  height: 145px;
+  width: 83%;
+  margin-top: 25px;
+  margin-left: 11px;
+  margin-right: 11px;
+  background-color: #65b7ff;
+  border-radius: 50%;
+}
+.lasteopp {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .flex-right {
   background-color: rgb(240, 234, 234);
@@ -175,9 +180,9 @@ body {
 }
 ul {
   list-style-type: none;
-  margin-top: 15%;
+  margin-top: 8%;
   position: fixed;
-  height: 100%;
+
   overflow: auto;
 }
 li a {
