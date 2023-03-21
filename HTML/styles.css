@@ -43,6 +43,6 @@ button:first-of-type {
   margin-left: calc(50% - 131.5px);
 }
 
-button::hover {
+button:hover {
   cursor: pointer;
 }

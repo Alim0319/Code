@@ -31,7 +31,7 @@
 }
 #my_stayle::before {
   content: "\f030";
-  font-family: fontawesome;
+  font-family: "fontawesome";
   font-size: 25px;
   color: #fff;
   display: inline-block;

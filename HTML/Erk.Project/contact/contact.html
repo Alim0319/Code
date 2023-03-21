@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Input Image Local Storage Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="contact.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/9f8df8b6c5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <picture>
+      <img id="img" src="" alt="" />
+    </picture>
+
+    <div class="buttons">
+      <input hidden id="input" type="file" />
+
+      <label
+        id="label"
+        role="button"
+        aria-label="Browse"
+        tabindex="0"
+        type="file"
+        for="input"
+      >
+        Browse...
+      </label>
+
+      <button id="button">Remove</button>
+    </div>
+  </body>
+</html>

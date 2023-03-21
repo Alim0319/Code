@@ -1,6 +1,8 @@
 body {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: auto;
+  max-width: 80rem;
+  margin-right: auto;
+  min-height: 100vh;
 }
 .nav-bar {
   margin-top: 20px;
@@ -128,7 +130,7 @@ body {
 }
 .flex-left {
   margin-top: 0px;
-  height: 1000px;
+  height: 100vh;
   width: 10.5%;
   background-image: url(images/me2.png);
   background-position: center;
@@ -136,8 +138,8 @@ body {
 
 .profile-pic-div {
   margin-top: 40px;
-  height: 100px;
-  width: 8%;
+  height: 150px;
+  width: 130px;
   position: absolute;
 
   transform: 50%, -50%;
@@ -176,15 +178,25 @@ body {
   cursor: pointer;
   transition: 200ms;
 }
-
 #uploadBtn::-webkit-file-upload-button {
   visibility: hidden;
+}
+#uploadBtn::before {
+  content: "\f030";
+  font-family: "fontawesome";
+  font-size: 25px;
+  color: #fff;
+  display: inline-block;
+}
+
+#uploadBtn:hover {
+  opacity: 1;
 }
 
 .flex-right {
   background-color: rgb(240, 234, 234);
   margin-top: 0px;
-  height: 1000px;
+  min-height: 100vh;
   width: 89.5%;
   text-align: justify;
   image-rendering: auto;
@@ -210,12 +222,10 @@ body {
   text-align: right;
 }
 ul {
-  width: 10.5%;
-  list-style-type: none;
+  width: 12%px;
   margin-top: 20%;
-  position: fixed;
-
-  overflow: auto;
+  position: absolute;
+  background-position: center;
 }
 li a {
   display: block;
