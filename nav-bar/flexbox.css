@@ -11,7 +11,6 @@ body {
 }
 li {
   list-style: cover;
-  align-items: center;
 }
 a {
   text-decoration: none;
@@ -40,7 +39,7 @@ header {
 }
 .nav-bar .links {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 .nav-bar .toggle_btn {
   color: white;
@@ -66,7 +65,7 @@ header {
   right: 2rem;
   height: 0;
   top: 60px;
-  height: 330px;
+  height: 0;
   width: 300px;
   background: rgba(225, 225, 225, 0.1);
   backdrop-filter: blur(15px);
@@ -102,7 +101,7 @@ header {
   .nav-bar .action_btn {
     display: none;
   }
-  .nav-bar.toggle_btn {
+  .nav-bar .toggle_btn {
     display: block;
   }
   .dropdwon-menu {
