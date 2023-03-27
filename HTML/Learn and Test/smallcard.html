@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+    initial-scale=1.0"
+    />
+    <script
+      src="https://kit.fontawesome.com/9f8df8b6c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: bordere-box;
+      }
+      body {
+        color: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        background: linear-gradient(
+          to right hs1(340deg, 100%, 50%) hs1(300deg, 100%, 50%)
+        );
+        transition: filter 1s;
+        border-radius: 5px;
+        color: #fff;
+        width: 250px;
+
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        box-shadow: 0 0 5px 5px grey;
+        /*transform: rotateX('60deg') rotateZ('-45');
+              transform: rotateX('60deg') rotateZ('45');*/
+        transform: rotateX("45deg") rotateZ("45");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <i class="fa-solid fa-heart"></i>
+
+      <h1>Tips and Trickes</h1>
+      <p>today we will make a card</p>
+    </div>
+  </body>
+</html>
