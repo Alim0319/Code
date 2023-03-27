@@ -10,7 +10,7 @@ body {
   background-position: center;
 }
 li {
-  list-style: cover;
+  list-style: none;
 }
 a {
   text-decoration: none;
