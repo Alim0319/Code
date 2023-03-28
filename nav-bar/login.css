@@ -9,7 +9,7 @@ section {
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  background: chartreuse;
+  background: rgb(5, 10, 1);
 }
 .from-box {
   position: relative;
