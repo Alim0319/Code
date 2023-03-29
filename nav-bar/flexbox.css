@@ -62,7 +62,7 @@ header {
 }
 .serch-box:hover >,
 .serch-txt {
-  width: 100px;
+  width: 200px;
   padding: 0 6px;
 }
 .serch-box:hover >,
@@ -79,18 +79,18 @@ header {
   justify-content: center;
   align-items: center;
 
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .search-txt {
   border: none;
-  background: none;
+  background: white;
   outline: none;
   float: left;
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
   transition: 0.4s;
   line-height: 40px;
-  width: 0px;
+  width: 0;
 }
 .action_btn {
   background-color: orange;
