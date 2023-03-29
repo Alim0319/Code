@@ -11,6 +11,7 @@ body {
 }
 li {
   list-style: none;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -48,49 +49,50 @@ header {
   display: none;
 }
 
-.serch-box {
+.search-box {
   position: absolute;
   color: #020202;
   top: 50%;
-  left: 50%;
-  width: 60px;
+  left: 25%;
+
   transform: translate(-50%, -50%);
-  background: red;
+  background: #2f3640;
   height: 40px;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 40px;
+  padding: 0;
 }
-.serch-box:hover >,
-.serch-txt {
-  width: 200px;
-  padding: 0 6px;
+.search-box:hover,
+.search-txt:hover {
+  width: 150px;
 }
-.serch-box:hover >,
-.serch-txt {
-  background: white;
+.search-box:hover,
+.search-txt {
+  background: wheat;
 }
 .search-btn {
-  color: rgb(254, 254, 254);
+  color: white;
   float: right;
-  width: 60px;
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  transition: 0.3s;
+  transition: 0.4s;
 }
 .search-txt {
   border: none;
-  background: white;
+  background: none;
   outline: none;
-  float: left;
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
-  transition: 0.4s;
+  float: right;
+  padding: 0;
+  color: white;
+
+  font-size: 1rem;
+  transition: 1s;
   line-height: 40px;
-  width: 0;
+  width: 0px;
 }
 .action_btn {
   background-color: orange;
@@ -158,4 +160,45 @@ header {
     left: 2rem;
     width: unset;
   }
+}
+.TestAutomatin {
+  display: none;
+}
+.nav-bar ul li:hover .TestAutomatin {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: skyblue;
+}
+.nav-bar ul li:hover .TestAutomatin ul {
+  display: block;
+  margin: 10px;
+  text-align: end;
+}
+.nav-bar ul li:hover .TestAutomatin ul li {
+  width: 150px;
+  padding: 10px;
+}
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+.Java {
+  display: none;
+}
+
+.TestAutomatin ul li:hover .Java {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 150px;
+  background-color: skyblue;
+}
+
+.TestAutomatin ul li:hover .Java ul li {
+  display: block;
+  margin: 10px;
+  text-align: center;
 }
