@@ -53,17 +53,20 @@ header {
   position: absolute;
   color: #020202;
   top: 50%;
-  left: 25%;
+  left: 85%;
+  display: none;
+  cursor: pointer;
 
   transform: translate(-50%, -50%);
-  background: #2f3640;
+  background: whitesmoke;
   height: 40px;
   border-radius: 40px;
   padding: 0;
 }
 .search-box:hover,
-.search-txt:hover {
-  width: 150px;
+.search-txt {
+  width: 250px;
+  padding: 0;
 }
 .search-box:hover,
 .search-txt {
@@ -92,9 +95,9 @@ header {
   font-size: 1rem;
   transition: 1s;
   line-height: 40px;
-  width: 0px;
+  width: 0;
 }
-.action_btn {
+/*.action_btn {
   background-color: orange;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -105,7 +108,7 @@ header {
   font-weight: bold;
   cursor: pointer;
   transition: scale 0.3 ease;
-}
+}*/
 .dropdwon-menu {
   display: none;
   position: absolute;
@@ -121,7 +124,7 @@ header {
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdwon-menu.open {
-  height: 340px;
+  height: 295px;
   color: rgb(177, 111, 238);
 }
 .dropdwon-menu li {
@@ -130,19 +133,19 @@ header {
   align-items: center;
   justify-content: center;
 }
-.dropdwon-menu .action_btn {
+.dropdwon-menu .search-box {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.action_btn:hover {
+/*.action_btn:hover {
   scale: 1.05;
   color: #fff;
 }
 .action_btn:active {
   scale: 0.95;
 }
-
+*/
 @media (max-width: 992px) {
   .nav-bar .links,
   .nav-bar .action_btn {
