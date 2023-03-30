@@ -9,6 +9,10 @@ body {
   background-size: cover;
   background-position: center;
 }
+img {
+  height: 120px;
+  width: 120px;
+}
 li {
   list-style: none;
   position: relative;
@@ -26,7 +30,7 @@ header {
   padding: 0 2rem;
 }
 .nav-bar {
-  height: 60px;
+  height: 150px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -34,10 +38,10 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.nav-bar .logo a {
+/*.nav-bar .logo a {
   font-size: 1.5rem;
   font-weight: bold;
-}
+}*/
 .nav-bar .links {
   display: flex;
   gap: 3rem;
