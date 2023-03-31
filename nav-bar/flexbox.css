@@ -55,12 +55,10 @@ header {
 
 .search-box {
   position: absolute;
-  color: #020202;
+  color: white;
   top: 50%;
   left: 85%;
-  display: none;
-  cursor: pointer;
-
+  display: block;
   transform: translate(-50%, -50%);
   background: whitesmoke;
   height: 40px;
@@ -68,16 +66,16 @@ header {
   padding: 0;
 }
 .search-box:hover,
-.search-txt {
+.search-txt:hover {
   width: 250px;
-  padding: 0;
+  padding: 0 6px;
 }
 .search-box:hover,
-.search-txt {
-  background: wheat;
+.search-txt:hover {
+  background: white;
 }
 .search-btn {
-  color: white;
+  color: rgb(239, 9, 9);
   float: right;
   width: 40px;
   height: 40px;
@@ -92,14 +90,14 @@ header {
   border: none;
   background: none;
   outline: none;
-  float: right;
+  float: left;
   padding: 0;
-  color: white;
+  color: rgb(9, 9, 9);
 
   font-size: 1rem;
   transition: 1s;
   line-height: 40px;
-  width: 0;
+  width: 0px;
 }
 /*.action_btn {
   background-color: orange;
