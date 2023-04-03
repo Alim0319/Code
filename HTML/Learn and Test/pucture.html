@@ -27,10 +27,10 @@
       }
       @keyframes galrotate {
         from {
-          transform: perspective(1200px) rotateY(0deg);
+          transform: rotate(0deg);
         }
         to {
-          transform: perspective(1200px) rotateX(360deg);
+          transform: rotate(360deg);
         }
       }
       .galary span img {
@@ -42,7 +42,7 @@
       .galary span {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 350px;
         transform-origin: center;
         transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
       }
