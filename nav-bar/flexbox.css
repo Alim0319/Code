@@ -38,10 +38,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-/*.nav-bar .logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-}*/
+
 .nav-bar .links {
   display: flex;
   gap: 3rem;
@@ -52,65 +49,25 @@ header {
   cursor: pointer;
   display: none;
 }
-
-.search-box {
-  /* position: absolute;*/
-  color: white;
-  top: 50%;
-  left: 83%;
-  display: block;
-  /*ransform: translate(-50%, -50%);*/
-  background: rgb(246, 243, 243);
-  height: 40px;
-  border-radius: 40px;
-  padding: 0;
-}
-.search-box:hover,
-.search-txt:hover {
-  width: 250px;
-  padding: 0 6px;
-}
-.search-box:hover,
-.search-txt:hover {
-  background: rgb(245, 240, 240);
-}
-.search-btn {
-  color: rgb(239, 9, 9);
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: 0.4s;
-}
-.search-txt {
+input {
+  background-color: #fff;
+  background-image: url("./images/search.png");
+  background-position: 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
   border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: rgb(226, 14, 14);
-
-  font-size: 1rem;
-  transition: 1s;
-  line-height: 40px;
-  width: 0px;
+  border-radius: 2rem;
+  padding: 0.75rem 0.75rem 0.75rem 1.75rem;
+  transition: 250ms;
+  width: 2.5rem;
 }
-/*.action_btn {
-  background-color: orange;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: scale 0.3 ease;
-}*/
+
+input:hover,
+input:focus {
+  width: 200px;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+}
+
 .dropdwon-menu {
   display: none;
   position: absolute;
@@ -136,22 +93,9 @@ header {
   align-items: center;
   justify-content: center;
 }
-.dropdwon-menu .search-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-/*.action_btn:hover {
-  scale: 1.05;
-  color: #fff;
-}
-.action_btn:active {
-  scale: 0.95;
-}
-*/
+
 @media (max-width: 992px) {
-  .nav-bar .links,
-  .nav-bar .action_btn {
+  .nav-bar .links {
     display: none;
   }
   .nav-bar .toggle_btn {
@@ -194,8 +138,11 @@ header {
 .Java {
   display: none;
 }
-
-.TestAutomatin ul li:hover .Java {
+.JavaScript {
+  display: none;
+}
+.TestAutomatin ul li:hover .Java,
+.TestAutomatin ul li:hover .JavaScript {
   display: block;
   position: absolute;
   top: 0;
@@ -203,7 +150,8 @@ header {
   background-color: skyblue;
 }
 
-.TestAutomatin ul li:hover .Java ul li {
+.TestAutomatin ul li:hover .Java ul li,
+.TestAutomatin ul li:hover .JavaScript ul li {
   display: block;
   margin: 10px;
   text-align: center;
