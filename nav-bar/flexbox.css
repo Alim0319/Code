@@ -156,3 +156,41 @@ input:focus {
   margin: 10px;
   text-align: center;
 }
+.project {
+  display: none;
+}
+.nav-bar ul li:hover .project {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: skyblue;
+}
+.nav-bar ul li:hover .project ul {
+  display: block;
+  margin: 10px;
+  text-align: center;
+}
+.nav-bar ul li:hover .project ul li {
+  width: 150px;
+  padding: 10px;
+}
+.about {
+  display: none;
+}
+.nav-bar ul li:hover .about {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: skyblue;
+}
+.nav-bar ul li:hover .about ul {
+  display: block;
+  margin: 10px;
+  text-align: start;
+}
+.nav-bar ul li:hover .about ul li {
+  width: 150px;
+  padding: 10px;
+}
