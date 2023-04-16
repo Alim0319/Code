@@ -40,7 +40,7 @@ let x = z;
 console.log(x);
 
 let e = 25;
-e += 5; // we can use her -= also
+e += 5; // we can use her -,= also
 console.log("Value of e is " + e);
 
 let n = " Welcome to Javascript";
@@ -64,9 +64,24 @@ can handle all cases correctly */
 
 const userName = "Tom";
 const userAge = 18;
-let userIsLoggedIn = false;
+let userIsLoggedIn = false; //can change true
 let userIsBlocked = false;
 let goToPage = "";
+if (userName) {
+  console.log("User name is :" + userName);
+} else {
+  console.log("User mame is emptiy");
+}
+
+//user age 18>=
+
+if (userAge >= 18 && userAge < 18) {
+  console.log("user Age is :" + userAge);
+} else if (userAge < 18) {
+  console.log("user Age is :" + userIsBlocked);
+} else {
+  console.log("Error Massage:" + "Value is NOT display");
+}
 
 /* ASSIGNMENT 5
 
@@ -80,7 +95,7 @@ const variable = statement ? "this if true" : "this if not true"
 Try changing userMale to both true and false and console.log your new variable,
 to see that your conditional is working.
 */
-const userMale = Mr;
+const userMale = true;
 //let user=userMale>= "Mr?" "Mr" : "Mrs";
 //console.log( `ddddd` ${userMale = Mr ? " Mr" : "Mrs"});
 
@@ -94,7 +109,7 @@ switch (userMale) {
 
     break;
   default:
-    console.log("jhkfhjghjskdfg");
+    console.log("It is true");
 }
 switch (true) {
   case userMale >= "Mr":
@@ -105,5 +120,5 @@ switch (true) {
     console.log("gjesten er Mrs");
     break;
   default:
-    console.log("jhkfhjghjskdfg");
+    console.log("it is true");
 }
