@@ -68,6 +68,101 @@ function myFunction(a, b) {
 }
 console.log(x1);
 
+// funcrion keyword syntax
+myFunction();
+
+function myFunction() {
+  console.log("Funksjonen har kjørt. 🤓");
+}
+myFunction();
+
+//arrowfunction syntaax
+
+const myArrowfunction = () => {
+  console.log("Arrowfunction har kjørt.");
+};
+
+myArrowfunction();
+
+// return statement
+
+function myReturn() {
+  return "God morgen";
+}
+
+//const myGreeting = myReturn();
+
+console.log(myReturn());
+
+// Scooe
+
+let lives = 3;
+const myScope = () => {
+  lives--;
+};
+myScope();
+console.log(lives);
+
+// parameter / arguments.
+
+function paramFunction(userName) {
+  return `Good morning ${userName}`;
+}
+
+console.log(paramFunction("Bengt"));
+
+const adder = (num1, num2) => {
+  return num1 + num2;
+};
+const result = adder(2, 3);
+console.log(result);
+
+const calculator = (num1, num2, operator) => {
+  if (operator === "+") {
+    return num1 + num2;
+  } else if (operator === "-") {
+    return num1 - num2;
+  } else if (operator === "*") {
+    return num1 * num2;
+  } else if (operator === "/") {
+    return num1 / num2;
+  } else {
+    return `${operator} is not a valid operator`;
+  }
+};
+
+console.log(calculator(4, 5, "/"));
+
+function calculator2(num1, num2, operator) {
+  switch (operator) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    case "/":
+      return num1 / num2;
+    default:
+      return "Invalid operator";
+  }
+}
+
+console.log(calculator2(54568, 656756456321, "*"));
+
+const fiveChecker = (num) => {
+  if (num % 5 === 0) {
+    return "Tallet er delelig på 5!";
+  } else {
+    return "Tallet er IKKE delelig på 5!";
+  }
+};
+//prettier-ignore
+const fiveCheckerV2 = (num) => num % 5 === 0 ? "Tallet er delelig på 5!" : "Tallet er ikke delelig på 5!";
+
+console.log(fiveChecker(12));
+console.log(fiveCheckerV2(12));
+
 //The () Operator Invokes the Function
 
 function a(b) {
@@ -129,3 +224,22 @@ if ((hour = new Date().getHours() < 8)) {
 } else {
   console.log("GOOD MORNING");
 }
+
+// trim method
+
+const trim = "            Hello       World     ";
+console.log(trim.trim());
+console.log(trim.length);
+console.log(trim.trim().length);
+console.log(trim.trim().toUpperCase());
+console.log(trim.toLowerCase());
+
+//JavaScript String padEnd()
+
+const alim = "Alim ";
+console.log(alim.padStart(8, "ERK"));
+console.log(alim.padEnd(8, "ERK"));
+
+console.log(alim.charAt(0)); // charAt() from index 0
+//JavaScript String charCodeAt()
+console.log(alim.charCodeAt(2)); //The method returns a UTF-16 code (an integer between 0 and 65535).
