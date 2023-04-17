@@ -80,7 +80,14 @@ if (userAge >= 18 && userAge < 18) {
 } else if (userAge < 18) {
   console.log("user Age is :" + userIsBlocked);
 } else {
-  console.log("Error Massage:" + "Value is NOT display");
+  console.log("Error Massage:Value is NOT display");
+}
+if (userIsLoggedIn !== userName) {
+  console.log("user is logged in" + userName);
+} else if (userIsBlocked) {
+  console.log("Users should be " + userIsBlocked);
+} else {
+  console.log("Go back to home page:" + goToPage);
 }
 
 /* ASSIGNMENT 5
@@ -96,29 +103,29 @@ Try changing userMale to both true and false and console.log your new variable,
 to see that your conditional is working.
 */
 const userMale = true;
-//let user=userMale>= "Mr?" "Mr" : "Mrs";
-//console.log( `ddddd` ${userMale = Mr ? " Mr" : "Mrs"});
+let user=userMale => userMale === Mr? "Mr" : "Mrs";
+console.log( `User gender is ${user} = Mr ? " Mr" : "Mrs"`);
 
 switch (userMale) {
-  case Mr:
-    console.log("gjesten er Mr");
+  case true:
+    console.log("this if true");
     break;
 
-  case Mrs:
-    console.log("gjesten er Mrs");
+  case false:
+    console.log("this if not true");
 
     break;
   default:
-    console.log("It is true");
+    console.log("this if true");
 }
 switch (true) {
   case userMale >= "Mr":
-    console.log("gjesten er Mr");
+    console.log("this if true");
     break;
 
-  case Mrs:
-    console.log("gjesten er Mrs");
+  case true:
+    console.log("this if not true");
     break;
   default:
-    console.log("it is true");
+    console.log("it is flase");
 }
