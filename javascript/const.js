@@ -123,3 +123,9 @@ fname.addEventListener("change", function () {
 // const name = document.getElementById("fname");
 // name.value = name.value.toUpperCase(); // can use toLowerCase also
 //}
+
+if ((hour = new Date().getHours() < 8)) {
+  console.log("GOOD DAY");
+} else {
+  console.log("GOOD MORNING");
+}
