@@ -148,7 +148,7 @@ function calculator2(num1, num2, operator) {
   }
 }
 
-console.log(calculator2(54568, 656756456321, "*"));
+console.log(calculator2(545625445644534646642358, 6567545456456546545456456321, "*"));
 
 const fiveChecker = (num) => {
   if (num % 5 === 0) {
@@ -243,3 +243,31 @@ console.log(alim.padEnd(8, "ERK"));
 console.log(alim.charAt(0)); // charAt() from index 0
 //JavaScript String charCodeAt()
 console.log(alim.charCodeAt(2)); //The method returns a UTF-16 code (an integer between 0 and 65535).
+
+
+const fruits = [
+	"Apple",
+	"Banana",
+	"Pear",
+	"Pineapple",
+	"Grapes",
+	"Cherry",
+	"Melon",
+	"Mango"
+];
+
+console.log(fruits.join(" "));
+fruits.push("Lemon");
+console.log(fruits);
+fruits.pop();
+console.log(fruits);
+fruits.shift();
+console.log(fruits);
+fruits.unshift("Lemon");
+console.log(fruits);
+fruits[3] = "Peach";
+console.log(fruits);
+fruits[fruits.indexOf("Pineapple")] = "Peach";
+console.log(fruits);
+fruits.splice(1, 2, "Lemon", "Peach");
+console.log(fruits);
