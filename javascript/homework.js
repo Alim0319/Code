@@ -103,8 +103,8 @@ Try changing userMale to both true and false and console.log your new variable,
 to see that your conditional is working.
 */
 const userMale = true;
-let user=userMale => userMale === Mr? "Mr" : "Mrs";
-console.log( `User gender is ${user} = Mr ? " Mr" : "Mrs"`);
+let user = (userMale) => (userMale === Mr ? "Mr" : "Mrs");
+console.log(`User gender is ${user} = Mr ? " Mr" : "Mrs"`);
 
 switch (userMale) {
   case true:

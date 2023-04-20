@@ -11,6 +11,14 @@ received is even. Use arrow function syntax.
 Console log the function call a few times with both even and odd numbers to
 show that it's working.
 */
+const oddOrEven = (num) => {
+  return num % 2 === 0 ? "Even" : "Odd";
+};
+console.log(oddOrEven(2)); // Output: Even
+console.log(oddOrEven(3)); // Output: Odd
+console.log(oddOrEven(10)); // Output: Even
+console.log(oddOrEven(7)); // Output: Odd
+console.log(oddOrEven(0)); // Output: Even
 
 /*
 2.
@@ -21,6 +29,13 @@ case with an exclamation mark at the end. Use the non-arrow function syntax (fun
 Example: console.log(yourFunction("this is cool")) should console log THIS IS COOL!
 Console log the function a few times to show that it's working.
 */
+
+function shout(str) {
+  return str.toUpperCase();
+}
+const str = "this is cool";
+const str1 = shout(str);
+console.log(str1); // output: this is cool!
 
 /*
 3.
@@ -42,6 +57,42 @@ Use whichever function syntax you want.
 Example console.log(yourFunction("Gunnar", 19)) should console log Good evening Gunnar
 Console log the function a few times to show that it's working.
 */
+const name = "Alim";
+
+const hour = new Date().getHours();
+
+if (hour >= 0 && hour < 6) {
+  console.log("Good night" + "-" + name);
+} else if (hour >= 6 && hour < 12) {
+  console.log("Good morning" + "-" + name);
+} else if (hour >= 12 && hour < 18) {
+  console.log("Good day" + "-" + name);
+} else if (hour >= 18 && hour < 24) {
+  console.log("Good evening " + "-" + name);
+} else if (hour === 24) {
+  console.log("Invalid time");
+}
+
+const hour1 = 19;
+
+function myFunction(hour1, name) {
+  switch (true) {
+    case hour1 >= 0 && hour1 < 6:
+      return "Good night" + "-" + name;
+    case hour1 >= 6 && hour1 < 12:
+      return "Good morning" + "-" + name;
+    case hour1 >= 12 && hour1 < 18:
+      return "Good day " + "-" + name;
+    case hour1 >= 18 && hour1 < 24:
+      return "Good evening " + "-" + name;
+    case hour1 === 24:
+      return "Invalid time";
+    default:
+      return "Invalid operator";
+  }
+}
+
+console.log(myFunction(hour1, name)); // output: Good evening - Alim
 
 /*
 4.
@@ -54,6 +105,11 @@ an array with just ["Green", "Blue"]
 
 Console log the function a few times to show that it's working
 */
+const color = ["Red", "Green", "Blue", "Yellow"];
+
+color.shift(); // removed first index
+color.pop(); // remove last index
+console.log(color);
 
 /*
 5.
@@ -66,9 +122,12 @@ Use string methods on the text variable to do the following:
  Console log each method used.
 */
 const text = "  Javascript is hard   ";
+console.log(text.replace("hard", "fun)")); //Replace the word 'hard' with 'fun'
+console.log(text.trim()); //Remove the whitespace from the beginning and end of the string
+console.log(text.split("")); //Split the string into an array where each word is an element
 
 /*
-6.
+6.t
 
 Use array methods to do the following:
  - Add a new hero to the end of the array
@@ -77,12 +136,23 @@ Use array methods to do the following:
  - Use the splice method to remove Thor and Hulk and add "Captain America"
 */
 const marvelHeroes = [
-	"Spider-Man",
-	"Thor",
-	"Hulk",
-	"Doctor Strange",
-	"Iron Man"
+  "Spider-Man",
+  "Thor",
+  "Hulk",
+  "Doctor Strange",
+  "Iron Man",
 ];
+marvelHeroes.push("Butman");
+console.log(marvelHeroes); //Add a new hero to the end of the array
+marvelHeroes.shift();
+console.log(marvelHeroes); //Remove the first hero of the array (Spider-Man)
+
+marvelHeroes.splice(marvelHeroes.indexOf("Doctor Strange"), 1, "Thanos");
+console.log(marvelHeroes);
+//Replace "Doctor Strange" with "Thanos"
+
+marvelHeroes.splice(0, 2, "Captain America");
+console.log(marvelHeroes);
 
 /*
 7.

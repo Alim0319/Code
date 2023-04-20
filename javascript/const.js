@@ -148,7 +148,9 @@ function calculator2(num1, num2, operator) {
   }
 }
 
-console.log(calculator2(545625445644534646642358, 6567545456456546545456456321, "*"));
+console.log(
+  calculator2(545625445644534646642358, 6567545456456546545456456321, "*")
+);
 
 const fiveChecker = (num) => {
   if (num % 5 === 0) {
@@ -244,16 +246,15 @@ console.log(alim.charAt(0)); // charAt() from index 0
 //JavaScript String charCodeAt()
 console.log(alim.charCodeAt(2)); //The method returns a UTF-16 code (an integer between 0 and 65535).
 
-
 const fruits = [
-	"Apple",
-	"Banana",
-	"Pear",
-	"Pineapple",
-	"Grapes",
-	"Cherry",
-	"Melon",
-	"Mango"
+  "Apple",
+  "Banana",
+  "Pear",
+  "Pineapple",
+  "Grapes",
+  "Cherry",
+  "Melon",
+  "Mango",
 ];
 
 console.log(fruits.join(" "));
@@ -271,3 +272,59 @@ fruits[fruits.indexOf("Pineapple")] = "Peach";
 console.log(fruits);
 fruits.splice(1, 2, "Lemon", "Peach");
 console.log(fruits);
+
+// Chaining
+
+// Endre --> E*N*D*R*E
+
+function starText(str) {
+  return str.toUpperCase().split("").join("*");
+}
+console.log(starText("Endre"));
+
+const fruits = ["Apple", "Banana", "Peach", "Melon", "Cherry"];
+
+const fruitHandler = (array) => {
+  return array.includes("Apple");
+};
+
+console.log(fruitHandler(fruits));
+
+const appleChecker = (array) => {
+  if (array.includes("Apple")) {
+    return "The array includes apple! YAY!";
+  } else {
+    return "No apples 🫤";
+  }
+};
+console.log(fruitHandler(fruits));
+
+const appleChecker1 = (array) => {
+  return `The array ${
+    array.includes("Apple") ? "does" : "doesn't"
+  } include apples`;
+};
+
+console.log(appleChecker1(fruits));
+// Number methods
+
+const x11 = 4.3124312423145354;
+
+console.log(x11.toPrecision(5));
+console.log(Math.round(x11));
+console.log(Math.floor(x11));
+console.log(Math.ceil(x11));
+
+const randomNumber = Math.random(); //Math.ceil(Math.random() * 100); , Math.floor(Math.random() * 100)+1
+console.log(randomNumber);
+
+const returnRandom = (array) => {
+  //const returnRandom = (array) => array[Math.floor(Math.random() * array.length)];
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+console.log(returnRandom(fruits2));
+
+const y = 674235; //"674235"
+
+console.log(y.toString); //+y, Number(y), parselnt(y),~~y
