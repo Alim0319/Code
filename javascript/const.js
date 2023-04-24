@@ -282,7 +282,7 @@ function starText(str) {
 }
 console.log(starText("Endre"));
 
-const fruits = ["Apple", "Banana", "Peach", "Melon", "Cherry"];
+const fruits2 = ["Apple", "Banana", "Peach", "Melon", "Cherry"];
 
 const fruitHandler = (array) => {
   return array.includes("Apple");
@@ -328,3 +328,42 @@ console.log(returnRandom(fruits2));
 const y = 674235; //"674235"
 
 console.log(y.toString); //+y, Number(y), parselnt(y),~~y
+
+// LOOPS
+
+//prettier-ignore
+const names = [ "Tom", "Eric", "Jessica", "Scott", "Anna", "Carl", "Elisabeth", "Benny", "Oliver", "Andy", "Jenny", "Ashley", "Erin", "Patrick" ];
+
+console.log(`Hei ${names[0]}`);
+console.log(`Hei ${names[1]}`);
+
+for (let i = 0; i < names.length; i++) {
+  console.log(`Hei ${names[i]}`);
+}
+
+for (let name of names) {
+  console.log(name);
+}
+//console.log("The correct number was " + randomNumber);
+
+// BREAK / CONTINUE
+
+for (let i = 0; i < 10; i++) {
+  if (i === 7) break; // continue isteden break , not inculedet 7
+  console.log(i);
+}
+
+for (let i = 0; i < names.length; i++) {
+  if (names[i] === "Scott") {
+    console.log("Scott, you suck.");
+    continue;
+  }
+  console.log(`Hello ${names[i]}`);
+}
+
+for (let i = 1; i <= 10; i++) {
+  for (let j = i; j <= 10; j++) {
+    let result = i * j;
+    console.log(`${i}*${j}=${result}`);
+  }
+}

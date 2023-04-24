@@ -180,6 +180,23 @@ Use arrow function syntax.
 Console log the function call with a few different datatypes to show that it's working
 */
 
+const coolMaker = (type) => {
+  if (typeof type === "string") {
+    return "😎" + type + "😎";
+  } else if (typeof type === "number") {
+    return "😎" + " " + (type * 2).toString() + " " + "😎";
+  } else if (typeof type === "boolean") {
+    return type ? "😎Yeah😎" : "😎Chill😎";
+  } else {
+    return "😎Primitive values only😎";
+  }
+};
+console.log(coolMaker("Hello"));
+console.log(coolMaker(4));
+console.log(coolMaker(true));
+console.log(coolMaker(false));
+console.log(coolMaker([1, 2, 3]));
+
 /*
 8.
 
@@ -198,3 +215,14 @@ Examples:
 console.log(yourFunction(["Red", "Green"], "Blue")) --> ["Red", "Green", "Blue"]
 console.log(yourFunction(["Red", "Green", "Blue"], "Green")) --> ["Red", "Blue"]
 */
+const color1 = (arr, str) => {
+  if (arr.includes(str)) {
+    arr.splice(arr.indexOf(str), 1);
+  } else {
+    arr.push(str);
+  }
+  return arr;
+};
+
+console.log(color1(["Red", "Green"], "Blue")); // Output: ["Red", "Green", "Blue"]
+console.log(color1(["Red", "Green", "Blue"], "Green")); // Output: ["Red", "Blue"]
