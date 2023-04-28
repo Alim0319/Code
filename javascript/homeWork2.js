@@ -37,6 +37,10 @@ const str = "this is cool";
 const str1 = shout(str);
 console.log(str1); // output: this is cool!
 
+function shout2(str) {
+  return str.toUpperCase() + "!";
+}
+
 /*
 3.
 
@@ -94,6 +98,18 @@ function myFunction(hour1, name) {
 
 console.log(myFunction(hour1, name)); // output: Good evening - Alim
 
+if (hour < 6) {
+  console.log("Good night" + name);
+} else if (hour < 12) {
+  console.log("Good morning" + name);
+} else if (hour < 18) {
+  console.log("Good day" + name);
+} else if (hour < 24) {
+  console.log("Good evening " + name);
+} else {
+  console.log("Invalid time");
+}
+
 /*
 4.
 
@@ -110,6 +126,11 @@ const color = ["Red", "Green", "Blue", "Yellow"];
 color.shift(); // removed first index
 color.pop(); // remove last index
 console.log(color);
+
+const arrayTrimmer = (arr) => {
+  arr.shift(); // removed first index
+  arr.pop(); // remove last index
+};
 
 /*
 5.

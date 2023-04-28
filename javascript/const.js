@@ -344,7 +344,7 @@ for (let i = 0; i < names.length; i++) {
 for (let name of names) {
   console.log(name);
 }
-//console.log("The correct number was " + randomNumber);
+console.log("The correct number was " + randomNumber);
 
 // BREAK / CONTINUE
 
@@ -367,3 +367,238 @@ for (let i = 1; i <= 10; i++) {
     console.log(`${i}*${j}=${result}`);
   }
 }
+
+// WHILE loop
+
+const xLoop = 10;
+
+let yLoop = 0;
+
+while (xLoop !== yLoop) {
+  console.log(yLoop);
+  yLoop++;
+}
+
+// while (true) {
+// 	console.log(y);
+// 	y++;
+// }
+
+const fruits = [
+  "Lemon",
+  "Mangos",
+  "Apple",
+  "Pear",
+  "Grapes",
+  "Kiwi",
+  "Fig",
+  "Peach",
+  "Grapefruit",
+  "Watermelon",
+  "Orange",
+  "Banana",
+];
+
+// Funksjon som tar i mot et string array og returner
+//arrayet med alle strings reversert.
+//må kun godta arrays med lengde på 10-100
+
+const stringArrayReverser = (arr) => {
+  if (arr.length < 10 || arr.length > 100)
+    return "Array too short, or too long";
+
+  const reversedArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    const reversedFruit = arr[i].split("").reverse().join("");
+    reversedArray.push(reversedFruit);
+  }
+  return reversedArray;
+};
+const reversedFruits = stringArrayReverser(fruits);
+console.log(reversedFruits);
+
+const person1 = {
+  firstName: "Yngve",
+  lastName: "Olsen",
+  age: 31,
+  postCode: 4014,
+  hobbies: ["coding", "movies", "jogging"],
+};
+
+person1.firstName = "Bengt";
+person1.age++;
+person1.city = "Stavanger";
+
+console.log(person1);
+
+const people = [
+  {
+    name: "Thomas",
+    male: true,
+    age: 23,
+    hobbies: ["cycling", "football", "pool"],
+  },
+  {
+    name: "Susan",
+    male: false,
+    age: 26,
+    hobbies: ["jogging", "travelling", "dancing"],
+  },
+  {
+    name: "Monica",
+    male: false,
+    age: 21,
+    hobbies: ["skateboarding", "guitar", "concerts"],
+  },
+  {
+    name: "Avery",
+    male: true,
+    age: 28,
+    hobbies: ["coding", "games", "memes"],
+  },
+  {
+    name: "Phillip",
+    male: true,
+    age: 24,
+    hobbies: ["boxing", "wrestling", "mma"],
+  },
+  {
+    name: "Otto",
+    male: true,
+    age: 36,
+    hobbies: ["movies", "cinema", "music"],
+  },
+  {
+    name: "Annabelle",
+    male: false,
+    age: 30,
+    hobbies: ["makeup", "fashion", "shopping"],
+  },
+  {
+    name: "Cathy",
+    male: false,
+    age: 18,
+    hobbies: ["design", "drawing", "css"],
+  },
+];
+
+for (let i = 0; i < people.length; i++) {
+  //if (people[i].name === "Cathy") console.log(people[i].age);
+  console.log(people[i].name);
+}
+
+// Funksjon skal generere en setning for hver person i arrayet:
+// "X is a (age) year old (man/woman) who likes (random hobby) among other things"
+
+function personSummarizer(arr) {
+  for (let person of people) {
+    console.log(person.name);
+    console.log(
+      `${person.name} is a ${person.age} year old ${
+        person.male ? "man" : "woman"
+      } who likes ${
+        person.hobbies[Math.floor(Math.random() * 3)]
+      } among other things.`
+    );
+  }
+}
+personSummarizer();
+
+function personSummarizer(arr) {
+  const summaries = [];
+  for (let person of arr) {
+    person.hobbies.push("coding");
+    person.age++;
+    const randomHobby =
+      person.hobbies[Math.floor(Math.random() * person.hobbies.length)];
+    const pronoun = person.male ? "man" : "woman";
+    const name = person.name;
+    const age = person.age;
+
+    const summary = `${name} is a ${age} year old ${pronoun} who likes ${randomHobby} among other things.`;
+
+    summaries.push(summary);
+  }
+  return summaries;
+}
+personSummarizer(people);
+console.log(people);
+
+let countEl = document.getElementById("count-el"); // pass in arguments
+
+console.log(countEl);
+
+let count = 100;
+
+function increment() {
+  count = count - 1;
+  countEl.innerText = count;
+}
+
+const personA = {
+  firstName: "Bengt",
+  lastName: "Leiknes",
+  age: 43,
+};
+personA.nyTing = "Ny ting";
+console.log(personA);
+
+// Funksjon som genererer et array med random tall.
+// 2 parametre: 1. Hvor mange tall? 2. Hvor store tall?
+
+const makeNumberArray = (size, maxNum) => {
+  const numArray = [];
+  for (let i = 0; i < size; i++) {
+    numArray.push(Math.floor(Math.random() * maxNum) + 1);
+  }
+  return numArray;
+};
+const myRandomNumbers = makeNumberArray(20, 50);
+console.log(myRandomNumbers);
+
+//Funksjon som finner høyeste tallet i et number array
+
+const maxFinder = (arr) => {
+  let biggest = 0;
+  for (let value of arr) {
+    if (value > biggest) biggest = value;
+  }
+  return `The biggest number in the array is ${biggest}`;
+};
+console.log(maxFinder(myRandomNumbers));
+
+//for (let char of myText.split(""))    opgave 5 .
+
+// Funksjon som lager et random password
+// 1.lengden p[ password]
+
+function generatePassword(size) {
+  let password = " ";
+  let possibleChars =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789";
+  let currentSize = 0;
+
+  while (password.length < size) {
+    console.log();
+    const randomNum = math.floor(math.random() * possibleChars.length);
+    password += possibleChars.split("")[randomNum];
+    currentSize++;
+  }
+  return password;
+}
+console.log(generatePassword(10)),
+  function generatePassword1(size) {
+    let password = " ";
+    let possibleChars =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789"; // can we sett touppercase and number AB« Z, 0123456789
+    let currentSize = 0;
+
+    for (let i = 0; i < size; i++) {
+      console.log();
+      const randomNum = math.floor(math.random() * possibleChars.length);
+      password += possibleChars.split("")[randomNum];
+      currentSize++;
+    }
+    return password;
+  };
+console.log(generatePassword1(10));
