@@ -636,3 +636,123 @@ function multiply() {
   let result = num1 * num2;
   sumEl.textContent = "Sum: " + result;
 }
+
+// DOM Manipulation
+// Document Object Model
+
+//console.log(document);
+
+const grandParent = document.getElementById("grandparent");
+
+function yellowMaker(elem) {
+  elem.style.backgroundColor = "yellow";
+}
+
+const parent = document.getElementsByClassName("parent");
+
+for (let i = 0; i < parent.length; i++) {
+  yellowMaker(parent[i]);
+}
+
+const parent2 = document.querySelectorAll(".parent");
+
+yellowMaker(parent[0]);
+
+const paren1 = document.querySelector(".parent");
+
+yellowMaker(parent[0]);
+
+const newChild = document.createElement("h3");
+newChild.textContent = "Hei";
+//newChild.classList.add("child");  if want remov can use isteden for add
+grandParent.appendChild(newChild); //prepend if we put in top. isteden appendchaild
+// grandoarent isteden can use document.body.prepend
+
+const fruits = [
+  "Lemon",
+  "Mangos",
+  "Apple",
+  "Pear",
+  "Grapes",
+  "Kiwi",
+  "Fig",
+  "Peach",
+  "Grapefruit",
+  "Watermelon",
+  "Orange",
+  "Banana",
+];
+
+const myFruitList = document.createElement("ul");
+for (let fruit of fruits) {
+  const fruitItem = document.createElement("li");
+  fruitItem.textContent = fruit;
+  myFruitList.appendChild(fruitItem);
+}
+document.body.appendChild(myFruitList);
+
+const inputNum = document.querySelector("#inputnum");
+const circleContainer = document.querySelector("#circlecontainer");
+
+const makeCircles = () => {
+  //while (circleContainer.firstChild) {
+  //circleContainer.removeChild(circleContainer.firstChild);
+
+  if (inputNum.value < 1000 && inputNum.value > 0) {
+    //lag sirkler her
+    for (let i = 0; i < inputNum.value; i++) {
+      const circle = document.createElement("div");
+      circle.classList.add("circle");
+      circle.style.backgroundColor = `#${Math.floor(
+        Math.random() * 0xffffff
+      ).toString(16)}`;
+      circle.textContent = i + 1;
+      circleContainer.appendChild(circle);
+    }
+  } else {
+    window.alert("Please input a number between 1 and 1000");
+  }
+};
+
+let firstCard = 10;
+let secondCard = 7;
+let sum = firstCard + secondCard + 6; // 23
+
+if (sum < 21) {
+  console.log("Do you want to draw a new card? 🙂");
+} else if (sum === 21) {
+  console.log("Wohoo! You've got Blackjack! 🥳");
+} else {
+  console.log("You're out of the game! 😭");
+}
+
+// Check if the person is old enough to enter the nightclub (21)
+// Log a suitable message to the console in both cases
+
+let age1 = 21;
+
+// if less than 21 -> "You can not enter the club!"
+// else            -> "Welcome!"
+
+if (age1 < 20) {
+  console.log("You can not enter the club!");
+} else {
+  console.log("Welcome!");
+}
+å;
+
+// Check if the person is elegible for a birthday card from the King! (100)
+
+let age = 100;
+
+// if less than 100    -> "Not elegible"
+// else if exactly 100 -> "Here is your birthday card from the King!"
+// else                -> "Not elegible, you have already gotten one"
+
+if (age < 100) {
+  console.log("Not elegible");
+} else if (age === "100") {
+  console.log("Here is your birthday card from the King!");
+} else {
+  console.log("Not elegible, you have already gotten one");
+}
