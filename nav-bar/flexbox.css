@@ -200,21 +200,23 @@ input:focus {
   display: flex;
 }
 .flex-left {
-  margin-top: 0px;
+
   height: 100vh;
   width: 20%;
   background-image: url(images/me2.png);
   background-position: center;
-  align-items: center;
+  
+ 
 }
 
 .profile-pic-div {
-  margin-top: 100px;
+
   height: 150px;
   width: 150px;
-  margin-left: 65px;
+
   position: absolute;
-  text-align: center;
+  align-items: center;
+  
   transform: 50%, -50%;
   border-radius: 50%;
   overflow: hidden;
@@ -274,3 +276,24 @@ input:focus {
   image-rendering: auto;
   background-image: url(./images/logo-no-background.png);
 }
+
+#aboutme, #skilis{
+  position: absolute;
+ display:flex;
+ flex-direction: row;
+ text-align: center;
+ 
+  background-color:rgb(169, 104, 104);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+
+}
+
+ 
+
