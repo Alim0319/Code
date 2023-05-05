@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/9f8df8b6c5.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="index.js"></script>
 
     <title>about</title>
     <link rel="stylesheet" href="flexbox.css" />
@@ -107,15 +108,18 @@
             <label for="myStayle" id="uploadBtn"></label>
           </div>
           <div class="aboutme">
-            <button href="about.html" onclick="aboutme" id="aboutme">About me</button>
-            <button href="skilis.html" onclick="skilis" id="skilis">Skills</button>
+            <button href="about.html" onclick="aboutme" id="aboutme">
+              About me
+            </button>
+            <button href="skilis.html" onclick="skilis" id="skilis">
+              Skills
+            </button>
             <!--<ul>
               <li ><a id="about" href="About.html"> About me</a></li>
 
               <li><a id="resume" href="#Resume"> Resume</a></li>
             </ul>
-          -->
-          </div>
+          --></div>
         </div>
 
         <div class="flex-right">
@@ -157,19 +161,5 @@
         </div>
       </div>
     </header>
-
-    <script>
-      const toggleBtn = document.querySelector(`.toggle_btn`);
-      const toggleBtnIcon = document.querySelector(`.toggle_btn i`);
-      const dropDownMenu = document.querySelector(`.dropdwon-menu`);
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle(`open`);
-        const isOpen = dropDownMenu.classList.contains(`open`);
-
-        toggleBtnIcon.classList = isOpen
-          ? `fa-solid fa-xmark`
-          : `fa-solid fa-bars`;
-      };
-    </script>
   </body>
 </html>
