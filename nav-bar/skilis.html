@@ -9,8 +9,9 @@
       src="https://kit.fontawesome.com/9f8df8b6c5.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="index.js"></script>
 
-    <title>Erk.nav-bar</title>
+    <title>skilis</title>
     <link rel="stylesheet" href="flexbox.css" />
     <link rel="icon" href="images/logo-color.png" type="image/x-icon" />
   </head>
@@ -98,20 +99,50 @@
         <li><a href="project"> project</a></li>
         <li><a href="contact"> Contact</a></li>
       </div>
+
+      <div class="flex-side">
+        <div class="flex-left">
+          <div class="profile-pic-div">
+            <img src="./images/icon.png" id="photo" />
+            <input type="file" id="myStayle" />
+            <label for="myStayle" id="uploadBtn"></label>
+          </div>
+          <div class="aboutme">
+            <button onclick="aboutme" href="about.html" id="aboutme">
+              About me
+            </button>
+            <button href="skilis.html" onclick="skilis" id="skilis">
+              Skills
+            </button>
+          </div>
+        </div>
+
+        <div class="flex-right">
+          <div class="icon">
+            <div class="JavaScript">1</div>
+            <div class="visualStudioCode">2</div>
+            <div class="HTML5">3</div>
+            <div class="CSS3">4</div>
+            <div class="Pyhton">5</div>
+            <div class="React">6</div>
+            <div class="JSON">7</div>
+            <div class="CodePen">8</div>
+            <div class="Figma">9</div>
+            <div class="Cypress">10</div>
+            <div class="Java">11</div>
+            <div class="IntelliJIDEA">12</div>
+            <div class="ApacheMaven">13</div>
+            <div class="AWS">14</div>
+            <div class="PostMan">15</div>
+            <div class="MySQL">16</div>
+            <div class="TestNG">17</div>
+            <div class="Junit">18</div>
+            <div class="Cocumber">19</div>
+            <div class="JIRA">20</div>
+            <div class="confluence">21</div>
+          </div>
+        </div>
+      </div>
     </header>
-
-    <script>
-      const toggleBtn = document.querySelector(`.toggle_btn`);
-      const toggleBtnIcon = document.querySelector(`.toggle_btn i`);
-      const dropDownMenu = document.querySelector(`.dropdwon-menu`);
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle(`open`);
-        const isOpen = dropDownMenu.classList.contains(`open`);
-
-        toggleBtnIcon.classList = isOpen
-          ? `fa-solid fa-xmark`
-          : `fa-solid fa-bars`;
-      };
-    </script>
   </body>
 </html>

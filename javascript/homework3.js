@@ -94,7 +94,7 @@ for (let i = 0; i < people.length; i++) {
   people[i].city = cities[Math.floor(Math.random() * cities.length)];
   people[i].title = people[i].male ? "Mr." : "Ms.";
 
-  totalAge += people[1].age;
+  totalAge += people[i].age;
 
   people[i].hobbies.unshift("coding");
   people[i].age += 2;
