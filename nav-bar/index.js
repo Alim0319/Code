@@ -23,3 +23,8 @@ myStayle.addEventListener(`change`, function () {
     img.src = URL.createObjectURL(this.files[0]);
   }
 });
+
+function about() {
+  document.querySelector(".flex-right").after = "about";
+  console.log();
+}
