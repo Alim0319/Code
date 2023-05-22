@@ -24,7 +24,12 @@ myStayle.addEventListener(`change`, function () {
   }
 });
 
-function about() {
-  document.querySelector(".flex-right").after = "about";
-  console.log();
-}
+const aboutme = document.getElementById("right");
+const inputBtn = document.getElementById("aboutme");
+const text = document.getElementById("text");
+
+inputBtn.addEventListener("click", function () {
+  aboutme.innerHTML = "<h1>Java Test Automation Elevator Pitch Example</h1>";
+
+  console.log(aboutme);
+});
