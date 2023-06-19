@@ -5,14 +5,14 @@
 }
 body {
   height: 100vh;
-  background: linear-gradient(skyblue, rgb(220, 186, 186));
+  background: #010302;
 
   background-size: cover;
   background-position: center;
 }
 img {
-  height: 120px;
-  width: 120px;
+  height: 50px;
+  width: 50px;
 }
 li {
   list-style: none;
@@ -31,13 +31,14 @@ header {
   padding: 0 2rem;
 }
 .nav-bar {
-  height: 150px;
+  height: 50px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #626262;
 }
 
 .nav-bar .links {
@@ -52,7 +53,7 @@ header {
 }
 input {
   background-color: #fff;
-  background-image: url("./images/search.png");
+  background-image: url("./Image.index/icon.png");
   background-position: 0.75rem center;
   background-repeat: no-repeat;
   background-size: 1rem;
@@ -337,4 +338,18 @@ input:focus {
 .confluence {
   height: 100px;
   width: 100px;
+}
+.me {
+  margin: auto;
+  height: 50%;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+h1,
+h4 {
+  margin: auto;
+  color: aquamarine;
+  text-size-adjust: 5px;
 }
