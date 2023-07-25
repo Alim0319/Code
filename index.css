@@ -341,7 +341,6 @@ input:focus {
 .me {
   height: 50%;
   width: 40%;
-
   margin-top: 10px;
 }
 h1,
@@ -351,6 +350,27 @@ h4 {
   color: aquamarine;
   text-size-adjust: 5px;
   text-align: center;
+  line-height: 1.4em;
+  opacity: 0;
+}
+h1 {
+  font-size: 48px;
+}
+h4 {
+  font-size: 25px;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* At the end of the animation, opacity becomes 1 (fully visible) */
+  }
+}
+
+/* Target the <h1> and <h4> elements directly */
+.header1 h1,
+.header1 h4 {
+  animation: fadeIn 1s ease-in-out; /* Animation duration: 1 second, ease-in-out for smooth start and end */
+  animation-fill-mode: forwards; /* Keep the last keyframe styles (opacity: 1) after animation ends */
 }
 
 .header1 {
@@ -361,4 +381,72 @@ h4 {
   justify-content: flex-start;
   width: 100%;
   max-width: 1200px;
+}
+.me1 {
+  height: 25%;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.aboutHeader,
+.projectHeader,
+.skilisHeader,
+.contactHeader {
+  height: 691px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.aboutHeader {
+  background-color: #fff;
+}
+.coding {
+  width: 669px;
+  height: 691px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+p {
+  font-size: 15px;
+}
+.projectHeader {
+  background-color: #22242e;
+}
+.skilisHeader {
+  background-color: black;
+}
+.contactHeader {
+  background-color: white;
+}
+.contactGift {
+  height: 100%;
+  width: 100%;
+}
+footer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  background-color: cyan;
+  height: 100px;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.followme,
+.linkedin,
+.Github,
+.discord,
+.Email {
+  height: 60px;
+  width: 60px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
