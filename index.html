@@ -157,7 +157,96 @@
         <img class="coding" src="Image.index/coding.gif" />
       </header>
       <header class="projectHeader"></header>
-      <header class="skilisHeader"></header>
+      <header class="skilisHeader">
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="Image.index/HTML5.svg" alt="HTML5" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/css3.png" alt="CSS" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/JAVA.png" alt="JAVA" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/JS.svg" alt="JS" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/VisualStudio.png" alt="VisualStudio" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Figma.png" alt="Figma" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/jQuery.svg" alt="jQuery" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Json.png" alt="Json" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/react.png" alt="React" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Vite 3.webp" alt="Vite" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/nodejs.svg" alt="nodejs" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/NPM.png" alt="npm" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/intellij-idea.png" alt="intellij-idea" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/apache.png" alt="apache" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/bitbucket.png" alt="bitbucket" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/conflunus.png" alt="conflunus" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Jira.png" alt="Jira" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Junit.png" alt="Junit" />
+          </div>
+
+          <div class="grid-item">
+            <img src="Image.index/TestNG.png" alt="TestNG" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Cypress.svg" alt="Cypress" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/cucumber.png" alt="cucumber" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/POSTMAN.png" alt="POSTMAN" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/MySQL.png" alt="MySQL" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Python.png" alt="Pyhton" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Git.png" alt="Git" />
+          </div>
+          <div class="grid-item">
+            <img src="Image.index/Github.png" alt="Github" />
+          </div>
+          <div class="grid-item"><img src="Image.index/PR.png" alt="PR" /></div>
+        </div>
+      </header>
+      <audio id="hoverSound">
+        <source
+          src="Image.index/ma_soundsbyjw_the_brightest_alerts_and_notifications_1.wav"
+          type="audio"
+        />
+      </audio>
       <header class="contactHeader">
         <img class="contactGift" src="Image.index/contact.gif" alt="contact" />
       </header>
@@ -182,6 +271,22 @@
           ? `fa-solid fa-xmark`
           : `fa-solid fa-bars`;
       };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const hoverSound = document.getElementById("hoverSound");
+        const gridItems = document.querySelectorAll(".grid-item");
+
+        // Function to play the sound on hover
+        function playHoverSound() {
+          hoverSound.currentTime = 0; // Reset the audio to the beginning on each hover
+          hoverSound.play();
+        }
+
+        // Add event listeners to each grid-item
+        gridItems.forEach((item) => {
+          item.addEventListener("mouseover", playHoverSound);
+        });
+      });
     </script>
   </body>
 </html>
