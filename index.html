@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Erk.nav-bar</title>
+    <title>Portfolio-Alim</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" href="images/logo-color.png" type="image/x-icon" />
   </head>
@@ -272,21 +272,23 @@
           : `fa-solid fa-bars`;
       };
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const hoverSound = document.getElementById("hoverSound");
+      /* document.addEventListener("DOMContentLoaded", function () {
         const gridItems = document.querySelectorAll(".grid-item");
+        const hoverSound = new Audio(
+          "Image.index/ma_soundsbyjw_the_brightest_alerts_and_notifications_1.wav"
+        );
 
         // Function to play the sound on hover
         function playHoverSound() {
-          hoverSound.currentTime = 0; // Reset the audio to the beginning on each hover
+          hoverSound.currentTime = 0; // Reset the audio to the beginning
           hoverSound.play();
         }
 
-        // Add event listeners to each grid-item
+        // Add event listener to each grid-item to play the sound on hover
         gridItems.forEach((item) => {
           item.addEventListener("mouseover", playHoverSound);
         });
-      });
+      });*/
     </script>
   </body>
 </html>
