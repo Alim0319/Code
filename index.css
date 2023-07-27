@@ -314,7 +314,7 @@ input:focus {
   flex-direction: row;
   position: absolute;
 }
-.JavaScript,
+/*.JavaScript,
 .Java,
 .visualStudioCode,
 .HTML5,
@@ -337,7 +337,7 @@ input:focus {
 .confluence {
   height: 100px;
   width: 100px;
-}
+}*/
 .me {
   height: 50%;
   width: 40%;
@@ -359,18 +359,6 @@ h1 {
 h4 {
   font-size: 25px;
   font-weight: bold;
-}
-@keyframes fadeIn {
-  to {
-    opacity: 1; /* At the end of the animation, opacity becomes 1 (fully visible) */
-  }
-}
-
-/* Target the <h1> and <h4> elements directly */
-.header1 h1,
-.header1 h4 {
-  animation: fadeIn 1s ease-in-out; /* Animation duration: 1 second, ease-in-out for smooth start and end */
-  animation-fill-mode: forwards; /* Keep the last keyframe styles (opacity: 1) after animation ends */
 }
 
 .header1 {
@@ -423,7 +411,7 @@ p {
   background-color: black;
   display: grid;
   grid-template-columns: repeat(
-    3,
+    0,
     1fr
   ); /* Adjust the number of columns as needed */
   gap: 10px; /* Adjust the gap between grid items as needed */
@@ -463,6 +451,7 @@ footer {
   background-color: black;
 }
 .grid-item {
+  position: relative;
   width: 100px; /* Adjust the width of each grid item as needed */
   height: 100px; /* Adjust the height of each grid item as needed */
   display: flex;
@@ -504,4 +493,8 @@ footer {
   50% {
     transform: scale(1.1);
   }
+}
+.name {
+  position: absolute;
+  bottom: 0;
 }
