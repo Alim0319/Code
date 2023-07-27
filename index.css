@@ -50,7 +50,7 @@ header {
   cursor: pointer;
   display: none;
 }
-input {
+.nav-bar input {
   background-color: #fff;
   background-image: url("./Image.index/icon.png");
   background-position: 0.75rem center;
@@ -313,6 +313,7 @@ input:focus {
   display: flex;
   flex-direction: row;
   position: absolute;
+  align-items: center;
 }
 /*.JavaScript,
 .Java,
@@ -410,9 +411,10 @@ p {
 .skilisHeader {
   background-color: black;
   display: grid;
+
   grid-template-columns: repeat(
     0,
-    1fr
+    3fr
   ); /* Adjust the number of columns as needed */
   gap: 10px; /* Adjust the gap between grid items as needed */
   justify-items: center;
@@ -421,8 +423,8 @@ p {
   background-color: white;
 }
 .contactGift {
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 40%;
 }
 footer {
   align-items: center;
@@ -446,12 +448,15 @@ footer {
   margin-right: 25px;
 }
 .grid-container {
+  margin: auto;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   background-color: black;
+  grid-gap: 10px;
 }
 .grid-item {
   position: relative;
+
   width: 100px; /* Adjust the width of each grid item as needed */
   height: 100px; /* Adjust the height of each grid item as needed */
   display: flex;
@@ -497,4 +502,65 @@ footer {
 .name {
   position: absolute;
   bottom: 0;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.contactForum input[type="text"],
+.contactForum textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.contactForum textarea {
+  height: 120px; /* Set a fixed height for the textarea */
+}
+
+.contactForum input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  float: right;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .contactForum {
+    max-width: 100%;
+  }
+
+  .contactForum input[type="text"],
+  .contactForum textarea {
+    width: 100%;
+  }
+}
+.inputBox {
+  margin-bottom: 20px;
+}
+.container {
+  height: 100%;
+  margin-top: 250px;
+}
+.contactTitle {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #22242e;
 }
