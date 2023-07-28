@@ -156,7 +156,23 @@
         </div>
         <img class="coding" src="Image.index/coding.gif" />
       </header>
-      <header class="projectHeader"></header>
+      <header class="projectHeader">
+        <main>
+          <div class="project-container">
+            <div class="project-item">
+              <img src="" alt="Project 1" />
+              <h2>Project 1</h2>
+              <p>0.</p>
+            </div>
+            <div class="project-item">
+              <img src="" alt="Project 2" />
+              <h2>Project 2</h2>
+              <p>1</p>
+            </div>
+            <!-- Add more grid items for other projects -->
+          </div>
+        </main>
+      </header>
       <header class="skilisHeader">
         <div class="grid-container">
           <div class="grid-item">
@@ -274,14 +290,8 @@
           </div>
         </div>
       </header>
-      <audio id="hoverSound">
-        <source
-          src="Image.index/ma_soundsbyjw_the_brightest_alerts_and_notifications_1.wav"
-          type="audio"
-        />
-      </audio>
+
       <header class="contactHeader">
-        <h1 class="contactTitle">CONTACT ME</h1>
         <section class="contact">
           <div class="container">
             <div class="contactInfo">
@@ -352,24 +362,6 @@
           ? `fa-solid fa-xmark`
           : `fa-solid fa-bars`;
       };
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const gridItems = document.querySelectorAll(".grid-item");
-        const hoverSound = new Audio(
-          "Image.index/ma_soundsbyjw_the_brightest_alerts_and_notifications_1.wav"
-        );
-
-        // Function to play the sound on hover
-        function playHoverSound() {
-          hoverSound.currentTime = 0; // Reset the audio to the beginning
-          hoverSound.play();
-        }
-
-        // Add event listener to each grid-item to play the sound on hover
-        gridItems.forEach((item) => {
-          item.addEventListener("mouseover", playHoverSound);
-        });
-      });
     </script>
   </body>
 </html>
