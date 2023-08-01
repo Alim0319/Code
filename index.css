@@ -112,7 +112,7 @@ input:focus {
     width: unset;
   }
 }
-.TestAutomatin {
+/*.TestAutomatin {
   display: none;
 }
 .nav-bar ul li:hover .TestAutomatin {
@@ -130,12 +130,13 @@ input:focus {
 .nav-bar ul li:hover .TestAutomatin ul li {
   width: 150px;
   padding: 10px;
-}
+}*/
 .fas {
   float: right;
   margin-left: 10px;
   padding-top: 3px;
 }
+/*
 .Java {
   display: none;
 }
@@ -156,10 +157,11 @@ input:focus {
   display: block;
   margin: 10px;
   text-align: center;
-}
+}*/
 .project {
   display: none;
 }
+/*
 .nav-bar ul li:hover .project {
   display: block;
   position: absolute;
@@ -175,11 +177,11 @@ input:focus {
 .nav-bar ul li:hover .project ul li {
   width: 150px;
   padding: 10px;
-}
+}*/
 .about {
   display: none;
 }
-.nav-bar ul li:hover .about {
+/*.nav-bar ul li:hover .about {
   display: block;
   position: absolute;
   left: 0;
@@ -194,7 +196,7 @@ input:focus {
 .nav-bar ul li:hover .about ul li {
   width: 150px;
   padding: 10px;
-}
+}*/
 
 /*.flex-side {
   display: flex;
@@ -348,20 +350,37 @@ h1,
 h4 {
   display: block;
   margin: auto;
-  color: aquamarine;
+
   text-size-adjust: 5px;
   text-align: center;
   line-height: 1.4em;
-  opacity: 0;
 }
 h1 {
-  font-size: 48px;
+  color: white;
+  font-size: 42px;
+  margin-top: 5px;
+  margin-bottom: 60px;
 }
 h4 {
+  color: #555;
   font-size: 25px;
   font-weight: bold;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.header1 h1,
+.header1 h4 {
+  animation: fadeIn 1s ease-in-out forwards;
+}
 .header1 {
   display: flex;
   flex-wrap: wrap;
@@ -376,6 +395,7 @@ h4 {
   height: 25%;
   width: 30%;
 }
+
 .aboutHeader,
 .projectHeader,
 .skilisHeader,
@@ -391,10 +411,25 @@ h4 {
 }
 .aboutHeader {
   background-color: #fff;
+
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.aboutHeader h1 {
+  color: #000;
+  flex: 1;
+}
+.textcontant {
+  flex: 2;
+  padding-right: 20px;
+}
+.aboutHeader p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 .coding {
-  width: 669px;
-  height: 691px;
+  width: 650px;
+  height: 650px;
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -567,7 +602,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   display: flex;
-  flex-wrap: wrap;
+
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
@@ -595,12 +630,14 @@ main {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  margin-bottom: 0;
 }
 
 .project-item h2 {
-  margin-top: 10px;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .project-item p {
-  margin-top: 5px;
+  font-size: 14px;
 }
