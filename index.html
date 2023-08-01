@@ -100,7 +100,7 @@
       </div>
 
       <header class="header1">
-        <img class="me" src="./Image.index/8406745-sh.jpg" />
+        <img class="me" src="./Image.index/men.jpeg" />
         <div>
           <h1>Hi there, I'm Alim</h1>
 
@@ -333,18 +333,33 @@
             <form>
               <div class="inputBox">
                 <span>Full Name *</span>
-                <input type="text" name="" required="required" />
+                <input
+                  id="Fullname"
+                  type="text"
+                  placeholder="Full name"
+                  required="required"
+                />
               </div>
-              <div class="inputBox">
+              <div>
                 <span>Email *</span>
-                <input type="text" name="" required="required" />
+
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="email"
+                  required="required"
+                />
               </div>
               <div class="inputBox">
                 <span> Message *</span>
-                <textarea required="required"></textarea>
+                <textarea
+                  id="Message"
+                  placeholder="Message"
+                  required="required"
+                ></textarea>
               </div>
-              <div class="inputBox">
-                <input type="submit" name="" value="send" />
+              <div class="send">
+                <button id="send">Send</button>
               </div>
             </form>
           </div>
@@ -369,7 +384,7 @@
         </a>
       </footer>
     </header>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       const toggleBtn = document.querySelector(`.toggle_btn`);
       const toggleBtnIcon = document.querySelector(`.toggle_btn i`);
@@ -382,6 +397,25 @@
           ? `fa-solid fa-xmark`
           : `fa-solid fa-bars`;
       };
+
+      const send = document.getElementById("send");
+      send.addEventListener("click", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("Fullname").value;
+        const email = document.getElementById("email").value;
+        const Message = document.getElementById("Message").value;
+        const body =
+          "name: " + name + "<br/> email: " + email + "<br/> Message" + Message;
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "alim.basok.erk@gmail.com",
+          Password: "wtzhmsilbnagaosw",
+          To: "alim.basok.erk@gmail.com",
+          From: email,
+          Subject: Message,
+          Body: body,
+        }).then((message) => alert(message));
+      });
     </script>
   </body>
 </html>

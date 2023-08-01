@@ -549,6 +549,7 @@ footer {
 }
 
 .contactForum input[type="text"],
+.contactForum input[type="email"],
 .contactForum textarea {
   width: 100%;
   padding: 10px;
@@ -561,13 +562,13 @@ footer {
   height: 120px; /* Set a fixed height for the textarea */
 }
 
-.contactForum input[type="submit"] {
+.send {
   background-color: #4caf50;
-  color: #fff;
   float: right;
   border: none;
+  color: transparent;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -578,6 +579,7 @@ footer {
   }
 
   .contactForum input[type="text"],
+  .contactForum input[type="email"],
   .contactForum textarea {
     width: 10%;
   }
