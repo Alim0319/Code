@@ -52,7 +52,7 @@ a:hover {
 }
 .nav-bar input {
   background-color: #fff;
-  background-image: url("./Image.index/icon.png");
+  background-image: url("./Image.index/search.png");
   background-position: 0.75rem center;
   background-repeat: no-repeat;
   background-size: 1rem;
@@ -158,9 +158,9 @@ input:focus {
   margin: 10px;
   text-align: center;
 }*/
-.project {
+/*.project {
   display: none;
-}
+}*/
 /*
 .nav-bar ul li:hover .project {
   display: block;
@@ -178,9 +178,9 @@ input:focus {
   width: 150px;
   padding: 10px;
 }*/
-.about {
+/*.about {
   display: none;
-}
+}*/
 /*.nav-bar ul li:hover .about {
   display: block;
   position: absolute;
@@ -303,12 +303,12 @@ input:focus {
   text-align: center;
 }*/
 .text {
-  margin-top: 50px;
+  margin-bottom: 30px;
   margin-left: 10%;
-  margin-right: 10%;
   font-size: 18px;
   text-justify: auto;
   text-align: start;
+  align-items: center;
 }
 
 .icon {
@@ -346,8 +346,8 @@ input:focus {
   width: 40%;
   margin: 2px;
 }
-h1,
-h4 {
+.header1 h1,
+.header1 h4 {
   display: block;
   margin: auto;
 
@@ -355,13 +355,13 @@ h4 {
   text-align: center;
   line-height: 1.4em;
 }
-h1 {
+.header1 h1 {
   color: white;
   font-size: 42px;
   margin-top: 5px;
   margin-bottom: 60px;
 }
-h4 {
+.header1 h4 {
   color: #555;
   font-size: 25px;
   font-weight: bold;
@@ -411,33 +411,40 @@ h4 {
 }
 .aboutHeader {
   background-color: #fff;
-
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
 }
-.aboutHeader h1 {
+.Titel,
+.ContactMe {
   color: #000;
-  flex: 1;
+  margin-bottom: 0;
+  margin-top: 30px;
 }
-.textcontant {
-  flex: 2;
-  padding-right: 20px;
+.textContent {
+  margin-top: 15%;
+  text-indent: 50px;
+  line-height: 1.8;
 }
-.aboutHeader p {
-  font-size: 18px;
-  line-height: 1.6;
+
+.contentContainer {
+  display: flex;
 }
 .coding {
-  width: 650px;
-  height: 650px;
+  width: 550px;
+  height: auto;
   flex-shrink: 0;
   margin-top: 1px;
 }
-p {
-  font-size: 15px;
-}
+
 .projectHeader {
   background-color: #22242e;
+  flex-direction: column;
+}
+.myProject,
+.mySkilis {
+  color: #fff;
+}
+.skilisHeader {
+  flex-direction: column;
 }
 .skilisHeader {
   background-color: black;
@@ -451,6 +458,7 @@ p {
 }
 .contactHeader {
   background-color: white;
+  flex-direction: column;
 }
 .contactGift {
   height: 80%;
@@ -461,7 +469,7 @@ footer {
   justify-content: center;
   display: flex;
   margin: auto;
-  background-color: cyan;
+  background-color: #626262;
   height: 100px;
   width: 100%;
   border-radius: 25px;
@@ -469,9 +477,7 @@ footer {
 
 .followme,
 .linkedin,
-.Github,
-.discord,
-.Email {
+.Github {
   height: 60px;
   width: 60px;
   margin-left: 25px;
@@ -536,7 +542,6 @@ footer {
 .contact {
   position: relative;
   display: flex;
-
   justify-content: space-between;
   height: 100%;
   width: 100%;
@@ -569,12 +574,12 @@ footer {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .contactForum {
-    max-width: 100%;
+    max-width: 10%;
   }
 
   .contactForum input[type="text"],
   .contactForum textarea {
-    width: 100%;
+    width: 10%;
   }
 }
 .inputBox {
@@ -585,19 +590,7 @@ footer {
   justify-content: center;
   align-items: center;
 }*/
-.contactTitle {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  font-weight: bold;
-  color: #22242e;
-}
 
-main {
-  padding: 20px;
-}
 .project-container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
