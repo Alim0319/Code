@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -112,25 +112,25 @@ input:focus {
     width: unset;
   }
 }
-/*.TestAutomatin {
+.Resume {
   display: none;
 }
-.nav-bar ul li:hover .TestAutomatin {
+.nav-bar ul li:hover .Resume {
   display: block;
   position: absolute;
-  left: 0;
+
   top: 100%;
-  background-color: skyblue;
+  background-color: transparent;
 }
-.nav-bar ul li:hover .TestAutomatin ul {
+.nav-bar ul li:hover .Resume ul {
   display: block;
-  margin: 10px;
-  text-align: end;
+  margin: 15px;
+  text-align: start;
 }
-.nav-bar ul li:hover .TestAutomatin ul li {
+.nav-bar ul li:hover .Resume ul li {
   width: 150px;
   padding: 10px;
-}*/
+}
 .fas {
   float: right;
   margin-left: 10px;
@@ -235,7 +235,7 @@ input:focus {
 #myStayle {
   display: none;
 }*/
-#uploadBtn {
+/*#uploadBtn {
   width: 100%;
   height: 30px;
   position: absolute;
@@ -265,7 +265,7 @@ input:focus {
 
 #uploadBtn:hover {
   opacity: 1;
-}
+}*/
 
 /*.flex-right {
   margin-top: 60px;
@@ -303,6 +303,7 @@ input:focus {
   text-align: center;
 }*/
 .text {
+  margin: 0 auto;
   margin-bottom: 30px;
   margin-left: 10%;
   font-size: 18px;
@@ -342,6 +343,7 @@ input:focus {
   width: 100px;
 }*/
 .me {
+  margin: 0 auto;
   height: 50%;
   width: 40%;
   margin: 2px;
@@ -349,7 +351,7 @@ input:focus {
 .header1 h1,
 .header1 h4 {
   display: block;
-  margin: auto;
+  margin: 0 auto;
 
   text-size-adjust: 5px;
   text-align: center;
@@ -386,7 +388,7 @@ input:focus {
   flex-wrap: wrap;
   align-items: center;
   background-color: black;
-  margin: auto;
+  margin: 0 auto;
   justify-content: center;
   width: 100%;
   max-width: 1200px;
@@ -394,6 +396,7 @@ input:focus {
 .me1 {
   height: 25%;
   width: 30%;
+  margin: 0 auto;
 }
 
 .aboutHeader,
@@ -405,7 +408,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   max-width: 1200px;
 }
@@ -418,21 +421,25 @@ input:focus {
   color: #000;
   margin-bottom: 0;
   margin-top: 30px;
+  margin: auto;
 }
 .textContent {
   margin-top: 15%;
   text-indent: 50px;
   line-height: 1.8;
+  margin: auto;
 }
 
 .contentContainer {
   display: flex;
+  margin: auto;
 }
 .coding {
   width: 550px;
   height: auto;
   flex-shrink: 0;
   margin-top: 1px;
+  margin: auto;
 }
 
 .projectHeader {
@@ -442,6 +449,7 @@ input:focus {
 .myProject,
 .mySkilis {
   color: #fff;
+  margin: auto;
 }
 .skilisHeader {
   flex-direction: column;
@@ -463,16 +471,17 @@ input:focus {
 .contactGift {
   height: 80%;
   width: 40%;
+  margin: auto;
 }
 footer {
   align-items: center;
   justify-content: center;
   display: flex;
-  margin: auto;
+
   background-color: #626262;
   height: 100px;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 .followme,
@@ -491,28 +500,27 @@ footer {
 }
 .grid-item {
   position: relative;
-
+  margin: auto;
   width: 100px;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff; /* Set the background color of each grid item as desired */
-  border-radius: 10px; /* Add border radius for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  animation: fadeInScale 0.5s ease-in-out; /* Add fadeInScale animation to each grid item */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 0.5s ease-in-out;
 }
 .grid-item:hover {
-  animation: bounce 0.5s ease-in-out; /* Add bounce animation on hover */
+  animation: bounce 0.5s ease-in-out;
 }
 
 .grid-item img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Ensure the image fits within the grid item */
+  object-fit: contain;
 }
 
-/* Animation keyframes for fadeInScale */
 @keyframes fadeInScale {
   from {
     opacity: 0;
@@ -537,6 +545,7 @@ footer {
 .name {
   position: absolute;
   bottom: 0;
+  margin: auto;
 }
 
 .contact {
@@ -562,14 +571,15 @@ footer {
   height: 120px; /* Set a fixed height for the textarea */
 }
 
-.send {
-  background-color: #4caf50;
+#send {
+  background-color: green;
   float: right;
   border: none;
-  color: transparent;
+  color: white;
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
+  margin: auto;
 }
 
 /* Media query for mobile devices */
@@ -582,10 +592,12 @@ footer {
   .contactForum input[type="email"],
   .contactForum textarea {
     width: 10%;
+    margin: auto;
   }
 }
 .inputBox {
   margin-bottom: 20px;
+  margin: auto;
 }
 /*.container {
   height: 100%;
@@ -594,6 +606,7 @@ footer {
 }*/
 
 .project-container {
+  margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   display: flex;
@@ -606,6 +619,7 @@ footer {
 }
 
 .project-item {
+  margin: auto;
   position: relative;
   width: 300px;
   height: 300px;
@@ -622,6 +636,7 @@ footer {
 }
 
 .project-item img {
+  margin: auto;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -629,10 +644,12 @@ footer {
 }
 
 .project-item h2 {
+  margin: auto;
   font-size: 16px;
   margin-bottom: 5px;
 }
 
 .project-item p {
   font-size: 14px;
+  margin: auto;
 }

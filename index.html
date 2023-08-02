@@ -49,9 +49,24 @@
             </div>-->
           </li>
           <li>
-            <a href="">
-              Test automation<i class="fas fa-solid fa-caret-down"></i
+            <a href="" download class="resume-button"
+              >Download Resume <i class="fas fa-solid fa-caret-down"></i
             ></a>
+            <div class="Resume">
+              <ul>
+                <li>
+                  <a href="Image.index/CV_Alim.pdf">Resume</a>
+                  <div class="CoverLatter">
+                    <ul>
+                      <li><a href="#">CoverLatter</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- <a href="">
+              Test automation<i class="fas fa-solid fa-caret-down"></i
+            ></a>-->
             <!--<div class="TestAutomatin">
              <ul>
                 <li>
@@ -401,9 +416,11 @@
       const send = document.getElementById("send");
       send.addEventListener("click", function (e) {
         e.preventDefault();
+        //console.log("hi");
 
         const email = document.getElementById("email").value;
         const Message = document.getElementById("Message").value;
+        const name = document.getElementById("Fullname").value;
         const body =
           "name: " + name + "<br/> email: " + email + "<br/> Message" + Message;
         Email.send({
