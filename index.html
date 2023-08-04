@@ -462,8 +462,7 @@
             Message;
 
           Email.send({
-            SecureToken:
-              "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b", // Replace with your SMTPJS Secure Token
+            SecureToken: "smtp.elasticemail.com", // Replace with your SMTPJS Secure Token
 
             To: "alim.basok.erk@gmail.com",
             From: email,
@@ -472,9 +471,9 @@
           }).then((message) => {
             alert("Email sent successfully!");
 
-            const referralLink =
+            /*const referralLink =
               "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
-            window.location.href = referralLink;
+            window.location.href = referralLink;*/
           });
         });
       });
