@@ -22,13 +22,13 @@
         </div>
 
         <ul class="links">
-          <li><a href=""> Home</a></li>
+          <li><a href="header1"> Home</a></li>
           <li>
             <a onclick="about" href=""
               >About<i class="fas fa-solid fa-caret-down"></i
             ></a>
 
-            <div class="about">
+            <div class="#about">
               <!-- <ul>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="skilis.html">Silks</a></li>
@@ -49,7 +49,7 @@
             </div>-->
           </li>
           <li>
-            <a href=""
+            <a href="Download"
               >Download Resume <i class="fas fa-solid fa-caret-down"></i
             ></a>
             <div class="Resume">
@@ -107,10 +107,21 @@
         </div>
       </div>
       <div class="dropdwon-menu">
-        <li><a href="Flexbox.html"> Home</a></li>
+        <li><a href="header1"> Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="#service"> Service</a></li>
         <li><a href="#project"> project</a></li>
+        <li>
+          <a href="#Download"> Download Resume</a>
+          <div class="Resume">
+            <ul>
+              <li>
+                <a href="Image.index/CV_Alim.pdf">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
         <li><a href="contactHeader"> Contact</a></li>
       </div>
 
@@ -399,6 +410,8 @@
         </a>
       </footer>
     </header>
+    <script src="https://elasticemail.com/scripts/eea.js"></script>
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       const toggleBtn = document.querySelector(`.toggle_btn`);
@@ -413,12 +426,13 @@
           : `fa-solid fa-bars`;
       };
 
-      const send = document.getElementById("send");
-      send.addEventListener("click", function (e) {
-        e.preventDefault();
-        //console.log("hi");
+      document.addEventListener("DOMContentLoaded", function () {
+        const send = document.getElementById("send");
+        send.addEventListener("click", function (e) {
+          e.preventDefault();
+          //console.log("hi");
 
-        const email = document.getElementById("email").value;
+          /*const email = document.getElementById("email").value;
         const Message = document.getElementById("Message").value;
         const name = document.getElementById("Fullname").value;
         const body =
@@ -432,6 +446,38 @@
           Subject: Message,
           Body: body,
         }).then((message) => alert(message));
+        let referralLink =
+          "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
+        window.location.href = eferralLink;
+      });*/
+          const email = document.getElementById("email").value;
+          const Message = document.getElementById("Message").value;
+          const name = document.getElementById("Fullname").value;
+          const body =
+            "name: " +
+            name +
+            "<br/> email: " +
+            email +
+            "<br/> Message: " +
+            Message;
+
+          Email.send({
+            Host: "smtp.gmail.com",
+            // Replace with your SMTPJS Secure Token
+            To: "alim.basok.erk@gmail.com",
+            Password: "wtzhmsilbnagaosw",
+            To: "alim.basok.erk@gmail.com",
+            From: email,
+            Subject: Message,
+            Body: body,
+          }).then((message) => {
+            alert("Email sent successfully!");
+
+            const referralLink =
+              "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
+            window.location.href = referralLink;
+          });
+        });
       });
     </script>
   </body>
