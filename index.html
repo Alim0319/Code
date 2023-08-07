@@ -402,9 +402,12 @@
         </a>
       </footer>
     </header>
-    <script src="https://elasticemail.com/scripts/eea.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("alim.basok.erk@gmail.com");
+    </script>
+    <script src="index.js" defer></script>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       const toggleBtn = document.querySelector(`.toggle_btn`);
       const toggleBtnIcon = document.querySelector(`.toggle_btn i`);
@@ -418,30 +421,12 @@
           : `fa-solid fa-bars`;
       };
 
-      document.addEventListener("DOMContentLoaded", function () {
+      /*document.addEventListener("DOMContentLoaded", function () {
         const send = document.getElementById("send");
         send.addEventListener("click", function (e) {
           e.preventDefault();
           //console.log("hi");
 
-          /*const email = document.getElementById("email").value;
-        const Message = document.getElementById("Message").value;
-        const name = document.getElementById("Fullname").value;
-        const body =
-          "name: " + name + "<br/> email: " + email + "<br/> Message" + Message;
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username: "alim.basok.erk@gmail.com",
-          Password: "wtzhmsilbnagaosw",
-          To: "alim.basok.erk@gmail.com",
-          From: email,
-          Subject: Message,
-          Body: body,
-        }).then((message) => alert(message));
-        let referralLink =
-          "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
-        window.location.href = eferralLink;
-      });*/
           const email = document.getElementById("email").value;
           const Message = document.getElementById("Message").value;
           const name = document.getElementById("Fullname").value;
@@ -450,26 +435,48 @@
             name +
             "<br/> email: " +
             email +
-            "<br/> Message: " +
+            "<br/> Message" +
             Message;
-
           Email.send({
-            SecureToken: "smtp.elasticemail.com", // Replace with your SMTPJS Secure Token
             Host: "smtp.gmail.com",
+            Username: "alim.basok.erk@gmail.com",
             Password: "wtzhmsilbnagaosw",
             To: "alim.basok.erk@gmail.com",
             From: email,
             Subject: Message,
             Body: body,
-          }).then((message) => {
-            alert("Email sent successfully!");
-
-            /*const referralLink =
-              "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
-            window.location.href = referralLink;*/
-          });
+          }).then((message) => alert(message));
+          let referralLink =
+            "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
+          window.location.href = eferralLink;
         });
-      });
+        const email = document.getElementById("email").value;
+        const Message = document.getElementById("Message").value;
+        const name = document.getElementById("Fullname").value;
+        const body =
+          "name: " +
+          name +
+          "<br/> email: " +
+          email +
+          "<br/> Message: " +
+          Message;
+
+        Email.send({
+          SecureToken: "smtp.elasticemail.com", // Replace with your SMTPJS Secure Token
+          Host: "smtp.gmail.com",
+          Password: "wtzhmsilbnagaosw",
+          To: "alim.basok.erk@gmail.com",
+          From: email,
+          Subject: Message,
+          Body: body,
+        }).then((message) => {
+          alert("Email sent successfully!");
+
+          const referralLink =
+            "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
+          window.location.href = referralLink;
+        });
+      });*/
     </script>
   </body>
 </html>
