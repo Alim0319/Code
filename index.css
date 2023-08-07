@@ -112,6 +112,26 @@ input:focus {
     width: unset;
   }
 }
+@media (max-width: 568px) {
+  .header1 .me,
+  .header1 .me1,
+  .header1 .h1,
+  .header1 .h4 {
+    left: 2rem;
+    /* Add your styles for the header1 element here */
+    /* For example, you can adjust the font size or alignment */
+    text-align: left;
+  }
+}
+@media (max-width: 667px) {
+  .header1 {
+    /* Add your styles for the header1 element here */
+    /* For example, you can adjust the font size or alignment */
+    text-align: left;
+    left: 1.2rem;
+  }
+}
+
 .Resume {
   display: none;
 }
@@ -343,15 +363,13 @@ input:focus {
   width: 100px;
 }*/
 .me {
-  margin: 0 auto;
+  object-fit: cover;
   height: 50%;
   width: 40%;
-  margin: 2px;
 }
 .header1 h1,
 .header1 h4 {
   display: block;
-  margin: 0 auto;
 
   text-size-adjust: 5px;
   text-align: center;
@@ -394,9 +412,47 @@ input:focus {
   max-width: 1200px;
 }
 .me1 {
+  object-fit: cover;
   height: 25%;
   width: 30%;
-  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .header1 {
+    padding: 40px;
+  }
+  .me {
+    height: 50%;
+    width: 40%;
+  }
+  .me {
+    height: 25%;
+    width: 30%;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+}
+
+/* Styles for smaller screens (mobile devices) */
+@media only screen and (max-width: 650px) {
+  .header1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .me,
+  .me1 {
+    width: 20%;
+    height: 20%;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
 }
 
 .aboutHeader,
