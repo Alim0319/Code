@@ -371,7 +371,7 @@
             </div>
           </div>
           <div class="contactForum">
-            <form>
+            <form id="contactForum">
               <div class="inputBox">
                 <span>Full Name *</span>
                 <input
@@ -400,7 +400,7 @@
                 ></textarea>
               </div>
               <div class="send">
-                <button id="send">Send</button>
+                <button type="submit" id="send">Send</button>
               </div>
             </form>
           </div>
@@ -449,14 +449,18 @@
           event.preventDefault();
 
           // send the email here
-          emailjs.sendForm(serviceID, templateID, this).then(
+          emailjs.sendForm(ServiceID, TemplateID, this).then(
             (response) => {
-              console.log("SUCCESS!", response.status, response.text);
-              alert("SUCCESS!");
+              console.log(
+                "Email sent successfully!",
+                response.status,
+                response.text
+              );
+              alert("Email sent successfully!");
             },
             (error) => {
               console.log("FAILED...", error);
-              alert("FAILED...", error);
+              alert("Failed to send email", error);
             }
           );
         });
