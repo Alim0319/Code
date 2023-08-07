@@ -402,12 +402,8 @@
         </a>
       </footer>
     </header>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      emailjs.init("alim.basok.erk@gmail.com");
-    </script>
-    <script src="index.js" defer></script>
 
+    <script src="emailjs-com.min.js"></script>
     <script>
       const toggleBtn = document.querySelector(`.toggle_btn`);
       const toggleBtnIcon = document.querySelector(`.toggle_btn i`);
@@ -420,6 +416,30 @@
           ? `fa-solid fa-xmark`
           : `fa-solid fa-bars`;
       };
+
+      const TemplateID = "template_4x01bng";
+      const PublicKey = "_RyfKlQUkTyEAVeWB";
+      const ServiceID = "service_yfnl7yp";
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+
+          emailjs.sendForm(ServiceID, TemplateID, formData, PublicKey).then(
+            (result) => {
+              console.log(result.text);
+              alert("Message sent successfully!"); // You can show a success message to the user
+            },
+            (error) => {
+              console.log(error.text);
+              alert("An error occurred. Please try again later."); // Show an error message to the user if something goes wrong
+            }
+          );
+        });
 
       /*document.addEventListener("DOMContentLoaded", function () {
         const send = document.getElementById("send");

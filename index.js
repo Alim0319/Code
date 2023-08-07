@@ -1,25 +1,34 @@
+import emailjs from "emailjs-com";
+
 const TemplateID = "template_4x01bng";
 const PublicKey = "_RyfKlQUkTyEAVeWB";
 const ServiceID = "service_yfnl7yp";
 
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+export const ContactUs = () => {
+  const form = useRef();
 
-    // Get the form data
-    const formData = new FormData(event.target);
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    // Replace "YOUR_TEMPLATE_ID" with the ID of your EmailJS email template
-    emailjs.send("ServiceID", "TemplateID", formData).then(
-      function (response) {
-        // Email sent successfully, show a success message to the user
-        alert("Email sent successfully!");
-        document.getElementById("contactForm").reset(); // Reset the form after successful submission
+    emailjs.sendForm(ServiceID, TemplateID, form.current, PublicKey).then(
+      (result) => {
+        console.log(result.text);
       },
-      function (error) {
-        // An error occurred while sending the email
-        alert("Failed to send email. Please try again later.");
+      (error) => {
+        console.log(error.text);
       }
     );
-  });
+  };
+
+  return (
+    <form ref={contactForum} onSubmit={send}>
+      <label>FullName</label>
+      <input type="text" name="Fullname" />
+      <label>Email</label>
+      <input type="email" name="email" />
+      <label>Message</label>
+      <textarea name="Message" />
+      <input type="submit" value="send" />
+    </form>
+  );
+};
