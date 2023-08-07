@@ -400,7 +400,7 @@
                 ></textarea>
               </div>
               <div class="send">
-                <button type="submit" id="send">Send</button>
+                <input type="submit" id="button" value="Send Email" />
               </div>
             </form>
           </div>
@@ -439,88 +439,41 @@
           : `fa-solid fa-bars`;
       };
 
-      const TemplateID = "template_ohs21yt";
-      const PublicKey = "_RyfKlQUkTyEAVeWB";
-      const ServiceID = "service_yfnl7yp";
+      const templateID = "template_ohs21yt";
+      const publicKey = "_RyfKlQUkTyEAVeWB";
+      const serviceID = "service_yfnl7yp";
+
+      const btn = document.getElementById("button");
 
       document
         .getElementById("contactForum")
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
+          btn.value = "Sending...";
+
+          const formData = new FormData(this);
+          const fullname = document.getElementById("Fullname").value;
+          const email = document.getElementById("email").value; // Get the email value
+          const message = document.getElementById("Message").value;
+          console.log(fullname, email, message); // Get the message value
+          formData.append("Fullname", fullname);
+          formData.append("email", email); // Add email to the form data
+          formData.append("message", message); // Add message to the form data
+
+          const body = new URLSearchParams(formData).toString();
           // send the email here
-          emailjs.sendForm(ServiceID, TemplateID, this).then(
-            (response) => {
-              console.log(
-                "Email sent successfully!",
-                response.status,
-                response.text
-              );
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Send Email";
               alert("Email sent successfully!");
             },
-            (error) => {
-              console.log("FAILED...", error);
-              alert("Failed to send email", error);
+            (err) => {
+              btn.value = "Send Email";
+              alert(JSON.stringify(err));
             }
           );
         });
-
-      /*document.addEventListener("DOMContentLoaded", function () {
-        const send = document.getElementById("send");
-        send.addEventListener("click", function (e) {
-          e.preventDefault();
-          //console.log("hi");
-
-          const email = document.getElementById("email").value;
-          const Message = document.getElementById("Message").value;
-          const name = document.getElementById("Fullname").value;
-          const body =
-            "name: " +
-            name +
-            "<br/> email: " +
-            email +
-            "<br/> Message" +
-            Message;
-          Email.send({
-            Host: "smtp.gmail.com",
-            Username: "alim.basok.erk@gmail.com",
-            Password: "wtzhmsilbnagaosw",
-            To: "alim.basok.erk@gmail.com",
-            From: email,
-            Subject: Message,
-            Body: body,
-          }).then((message) => alert(message));
-          let referralLink =
-            "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
-          window.location.href = eferralLink;
-        });
-        const email = document.getElementById("email").value;
-        const Message = document.getElementById("Message").value;
-        const name = document.getElementById("Fullname").value;
-        const body =
-          "name: " +
-          name +
-          "<br/> email: " +
-          email +
-          "<br/> Message: " +
-          Message;
-
-        Email.send({
-          SecureToken: "smtp.elasticemail.com", // Replace with your SMTPJS Secure Token
-          Host: "smtp.gmail.com",
-          Password: "wtzhmsilbnagaosw",
-          To: "alim.basok.erk@gmail.com",
-          From: email,
-          Subject: Message,
-          Body: body,
-        }).then((message) => {
-          alert("Email sent successfully!");
-
-          const referralLink =
-            "https://elasticemail.com/referral-reward?r=3ca36621-233e-4216-a054-6641325ddc6b";
-          window.location.href = referralLink;
-        });
-      });*/
     </script>
   </body>
 </html>
