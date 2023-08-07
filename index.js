@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 
-const TemplateID = "template_4x01bng";
+const TemplateID = "template_ohs21yt";
 const PublicKey = "_RyfKlQUkTyEAVeWB";
 const ServiceID = "service_yfnl7yp";
 
