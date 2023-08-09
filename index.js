@@ -8,8 +8,15 @@ toggleBtn.onclick = function () {
   toggleBtnIcon.classList = isOpen ? `fa-solid fa-xmark` : `fa-solid fa-bars`;
 };
 
-require("dotenv").config({ path: "keyFile.env" });
-const emailjs = require("emailjs-com");
+import { config } from "dotenv";
+config();
+//import dotenv from "dotenv";
+//dotenv.config();
+//require("dotenv").config();
+//import dotenv from "dotenv";
+//import {} from "dotenv/config";
+//dotenv.config({ path: ".env" });
+//const dotenv = require(".env");
 
 const templateID = process.env.templateID;
 const publicKey = process.env.publicKey;

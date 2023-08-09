@@ -63,8 +63,8 @@ a:hover {
   width: 2.5rem;
 }
 
-input:hover,
-input:focus {
+.nav-bar input:hover,
+.nav-bar input:focus {
   width: 200px;
   padding: 0.75rem 0.75rem 0.75rem 2.5rem;
 }
@@ -110,25 +110,6 @@ input:focus {
   .dropdwon-menu {
     left: 2rem;
     width: unset;
-  }
-}
-@media (max-width: 568px) {
-  .header1 .me,
-  .header1 .me1,
-  .header1 .h1,
-  .header1 .h4 {
-    left: 2rem;
-    /* Add your styles for the header1 element here */
-    /* For example, you can adjust the font size or alignment */
-    text-align: left;
-  }
-}
-@media (max-width: 667px) {
-  .header1 {
-    /* Add your styles for the header1 element here */
-    /* For example, you can adjust the font size or alignment */
-    text-align: left;
-    left: 1.2rem;
   }
 }
 
@@ -322,8 +303,7 @@ input:focus {
   margin-top: 10%;
   text-align: center;
 }*/
-.text {
-  margin: 0 auto;
+/*.text {
   margin-bottom: 30px;
   margin-left: 10%;
   font-size: 18px;
@@ -331,7 +311,7 @@ input:focus {
   text-align: start;
   align-items: center;
 }
-
+*/
 .icon {
   display: flex;
   flex-direction: row;
@@ -369,8 +349,6 @@ input:focus {
 }
 .header1 h1,
 .header1 h4 {
-  display: block;
-
   text-size-adjust: 5px;
   text-align: center;
   line-height: 1.4em;
@@ -386,27 +364,12 @@ input:focus {
   font-size: 25px;
   font-weight: bold;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.header1 h1,
-.header1 h4 {
-  animation: fadeIn 1s ease-in-out forwards;
-}
 .header1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   background-color: black;
-  margin: 0 auto;
   justify-content: center;
   width: 100%;
   max-width: 1200px;
@@ -417,8 +380,20 @@ input:focus {
   width: 30%;
 }
 @media only screen and (min-width: 768px) {
-  .header1 {
-    padding: 40px;
+  .header1,
+  .aboutHeader,
+  .skilisHeader,
+  .projectHeader,
+  .contactHeader {
+    align-items: center;
+  }
+  .textContent {
+    font-size: 1.5rem;
+  }
+
+  .coding {
+    width: 450px;
+    height: auto;
   }
   .me {
     height: 50%;
@@ -428,29 +403,64 @@ input:focus {
     height: 25%;
     width: 30%;
   }
-  h1 {
+  .header1 h1,
+  .Titel,
+  .ContactMe,
+  .myProject {
     font-size: 24px;
   }
-  h4 {
+  .header1 h4 {
     font-size: 16px;
   }
 }
 
-/* Styles for smaller screens (mobile devices) */
 @media only screen and (max-width: 650px) {
-  .header1 {
-    flex-direction: column;
+  .header1,
+  .aboutHeader,
+  .contactHeader,
+  .skilisHeader,
+  .projectHeader {
     align-items: center;
+  }
+  .coding {
+    width: 350px;
   }
   .me,
   .me1 {
     width: 20%;
-    height: 20%;
   }
-  h1 {
+  .header1 h1 .Titel,
+  .ContactMe,
+  .myProject {
     font-size: 1.3rem;
   }
-  h4 {
+  .header1 h4,
+  .textContent {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .aboutHeader,
+  .skilisHeader,
+  .projectHeader,
+  .contactHeader,
+  .contentContainer {
+    align-items: center;
+    height: auto;
+  }
+  .header1 h1,
+  .Titel,
+  .ContactMe,
+  .myProject {
+    font-size: 1.3rem;
+  }
+  .coding {
+    width: 200px;
+    height: auto;
+  }
+  .header1 h4,
+  .textContent {
     font-size: 1rem;
   }
 }
@@ -458,13 +468,14 @@ input:focus {
 .aboutHeader,
 .projectHeader,
 .skilisHeader,
-.contactHeader {
+.contactHeader,
+.contentContainer {
   height: 850px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+
   width: 100%;
   max-width: 1200px;
 }
@@ -477,25 +488,21 @@ input:focus {
   color: #000;
   margin-bottom: 0;
   margin-top: 30px;
-  margin: auto;
 }
 .textContent {
   margin-top: 15%;
   text-indent: 50px;
   line-height: 1.8;
-  margin: auto;
 }
 
 .contentContainer {
   display: flex;
-  margin: auto;
 }
 .coding {
   width: 550px;
   height: auto;
   flex-shrink: 0;
   margin-top: 1px;
-  margin: auto;
 }
 
 .projectHeader {
@@ -505,7 +512,6 @@ input:focus {
 .myProject,
 .mySkilis {
   color: #fff;
-  margin: auto;
 }
 .skilisHeader {
   flex-direction: column;
@@ -514,11 +520,8 @@ input:focus {
   background-color: black;
   display: grid;
 
-  grid-template-columns: repeat(
-    0,
-    3fr
-  ); /* Adjust the number of columns as needed */
-  gap: 10px; /* Adjust the gap between grid items as needed */
+  grid-template-columns: repeat(0, 3fr);
+  gap: 10px;
 }
 .contactHeader {
   background-color: white;
@@ -625,11 +628,11 @@ footer {
 }
 
 #message {
-  height: 120px; /* Set a fixed height for the textarea */
+  height: 120px;
 }
 
 #button {
-  background-color: green;
+  background-color: #626262;
   float: right;
   border: none;
   color: white;
@@ -639,7 +642,6 @@ footer {
   cursor: pointer;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
   .contactForum {
     max-width: 10%;
@@ -659,7 +661,6 @@ footer {
 }*/
 
 .project-container {
-  margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   display: flex;
@@ -672,7 +673,6 @@ footer {
 }
 
 .project-item {
-  margin: auto;
   position: relative;
   width: 300px;
   height: 300px;
@@ -705,4 +705,13 @@ footer {
 .project-item p {
   font-size: 14px;
   margin: auto;
+}
+.text {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-left: 10%;
+  font-size: 18px;
+  text-justify: auto;
+  text-align: start;
+  align-items: center;
 }
