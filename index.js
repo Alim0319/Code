@@ -1,34 +1,39 @@
-import emailjs from "emailjs-com";
+const toggleBtn = document.querySelector(`.toggle_btn`);
+const toggleBtnIcon = document.querySelector(`.toggle_btn i`);
+const dropDownMenu = document.querySelector(`.dropdwon-menu`);
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle(`open`);
+  const isOpen = dropDownMenu.classList.contains(`open`);
 
-const TemplateID = "template_ohs21yt";
-const PublicKey = "_RyfKlQUkTyEAVeWB";
-const ServiceID = "service_yfnl7yp";
-
-export const ContactUs = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(ServiceID, TemplateID, form.current, PublicKey).then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
-  };
-
-  return (
-    <form ref={contactForum} onSubmit={send}>
-      <label>FullName</label>
-      <input type="text" name="Fullname" />
-      <label>Email</label>
-      <input type="email" name="email" />
-      <label>Message</label>
-      <textarea name="Message" />
-      <input type="submit" value="send" />
-    </form>
-  );
+  toggleBtnIcon.classList = isOpen ? `fa-solid fa-xmark` : `fa-solid fa-bars`;
 };
+
+require("dotenv").config({ path: "keyFile.env" });
+const emailjs = require("emailjs-com");
+
+const templateID = process.env.templateID;
+const publicKey = process.env.publicKey;
+const serviceID = process.env.serviceID;
+(function () {
+  emailjs.init(publicKey);
+  const btn = document.getElementById("button");
+
+  document
+    .getElementById("contactForum")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      btn.value = "Sending...";
+
+      emailjs.sendForm(serviceID, templateID, this).then(
+        () => {
+          btn.value = "Send Email";
+          alert("Email sent successfully!");
+        },
+        (err) => {
+          btn.value = "Send Email";
+          alert(JSON.stringify(err));
+        }
+      );
+    });
+})();

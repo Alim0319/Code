@@ -19,19 +19,16 @@
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
 
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("_RyfKlQUkTyEAVeWB");
-      })();
-    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      emailjs.sendForm("ServiceID", "TemplateID", ".contactForum");
+      emailjs.sendForm("serviceID", "templateID", ".contactForum");
     </script>
 
     <script
       src="https://kit.fontawesome.com/9f8df8b6c5.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js" defer></script>
 
     <title>Portfolio-Alim</title>
     <link rel="stylesheet" href="index.css" />
@@ -372,36 +369,38 @@
           </div>
           <div class="contactForum">
             <form id="contactForum">
-              <div class="inputBox">
-                <span>Full Name *</span>
+              <div class="field">
+                <label for="from_name">Full Name *</label>
                 <input
-                  id="Fullname"
                   type="text"
+                  name="from_name"
+                  id="from_name"
                   placeholder="Full name"
                   required="required"
                 />
               </div>
-              <div>
-                <span>Email *</span>
-
+              <div class="field">
+                <label for="message">Message *</label>
                 <input
-                  type="email"
-                  id="email"
-                  placeholder="email"
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder=" Your Message"
                   required="required"
                 />
               </div>
-              <div class="inputBox">
-                <span> Message *</span>
-                <textarea
-                  id="Message"
-                  placeholder="Message"
+              <div class="field">
+                <label for="reply_to">Reply-email *</label>
+                <input
+                  type="text"
+                  name="reply_to"
+                  id="reply_to"
+                  placeholder="Email"
                   required="required"
-                ></textarea>
+                />
               </div>
-              <div class="send">
-                <input type="submit" id="button" value="Send Email" />
-              </div>
+
+              <input type="submit" id="button" value="Send Email" />
             </form>
           </div>
 
@@ -425,55 +424,5 @@
         </a>
       </footer>
     </header>
-
-    <script>
-      const toggleBtn = document.querySelector(`.toggle_btn`);
-      const toggleBtnIcon = document.querySelector(`.toggle_btn i`);
-      const dropDownMenu = document.querySelector(`.dropdwon-menu`);
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle(`open`);
-        const isOpen = dropDownMenu.classList.contains(`open`);
-
-        toggleBtnIcon.classList = isOpen
-          ? `fa-solid fa-xmark`
-          : `fa-solid fa-bars`;
-      };
-
-      const templateID = "template_ohs21yt";
-      const publicKey = "_RyfKlQUkTyEAVeWB";
-      const serviceID = "service_yfnl7yp";
-
-      const btn = document.getElementById("button");
-
-      document
-        .getElementById("contactForum")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          btn.value = "Sending...";
-
-          const formData = new FormData(this);
-          const fullname = document.getElementById("Fullname").value;
-          const email = document.getElementById("email").value; // Get the email value
-          const message = document.getElementById("Message").value;
-          console.log(fullname, email, message); // Get the message value
-          formData.append("Fullname", fullname);
-          formData.append("email", email); // Add email to the form data
-          formData.append("message", message); // Add message to the form data
-
-          const body = new URLSearchParams(formData).toString();
-          // send the email here
-          emailjs.sendForm(serviceID, templateID, this).then(
-            () => {
-              btn.value = "Send Email";
-              alert("Email sent successfully!");
-            },
-            (err) => {
-              btn.value = "Send Email";
-              alert(JSON.stringify(err));
-            }
-          );
-        });
-    </script>
   </body>
 </html>
