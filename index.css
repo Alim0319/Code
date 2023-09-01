@@ -1,5 +1,4 @@
 * {
-  margin: auto;
   padding: 0;
 
   box-sizing: border-box;
@@ -146,9 +145,8 @@ a:hover {
 .home,
 .about,
 .contact1,
-.skilis,
-.project {
-  height: 100vh;
+.skilis {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,9 +160,11 @@ a:hover {
   background-color: #fff;
   flex-direction: column;
 }
-.project {
+
+.project-img {
+  width: 100%;
+  height: 100%;
   background-color: #22242e;
-  flex-direction: column;
 }
 .skilis {
   flex-direction: column;
@@ -178,6 +178,50 @@ a:hover {
   background-color: white;
   flex-direction: column;
 }
+@media only screen and (max-width: 1024px) {
+  .home,
+  .about,
+  .contact,
+  .project,
+  .skilis,
+  .nav-bar,
+  .footer,
+  .contact1,
+  .project-container {
+    width: 100vh;
+    visibility: visible;
+    opacity: inherit;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .me,
+  .me1,
+  .coding,
+  .contactGift {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+  }
+  .home h1,
+  .about h1,
+  .project h1,
+  .contact h1,
+  .skilis h1 {
+    font-size: 1.5rem;
+    align-items: center;
+  }
+  .home h4 {
+    font-size: 1.3rem;
+  }
+  .textContent {
+    font-size: 1.2rem;
+  }
+  .grid-container {
+    display: block;
+  }
+}
+
 .home h1,
 .about h1,
 .project h1,
@@ -211,11 +255,8 @@ a:hover {
   font-size: 25px;
 }
 
-.contentContainer {
-  display: flex;
-}
 .coding {
-  width: 550px;
+  width: 450px;
   height: auto;
   flex-shrink: 0;
   margin-top: 1px;
@@ -293,12 +334,15 @@ a:hover {
   box-sizing: border-box;
   margin: 10px;
 }
+.field {
+  margin-left: 100px;
+}
 
 #message {
   height: 120px;
 }
 
-#button {
+.button {
   background-color: #626262;
   float: right;
   border: none;
@@ -366,20 +410,19 @@ a:hover {
   text-align: start;
   align-items: center;
 }
-.project {
-  width: 100%;
-  height: 100%;
-}
+
 .project-title {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
 
-footer {
+.footer {
   display: flex;
   background-color: #626262;
   height: 100px;
+  align-items: center;
+  justify-content: center;
 }
 .followme,
 .linkedin,

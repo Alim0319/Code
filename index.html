@@ -4,25 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      emailjs.sendForm("serviceID", "templateID", ".contactForum");
-    </script>
 
     <script
       src="https://kit.fontawesome.com/9f8df8b6c5.js"
@@ -42,20 +23,18 @@
         </div>
 
         <ul class="links">
-          <li><a href="#header1"> Home</a></li>
+          <li><a href="home"> Home</a></li>
           <li>
-            <a href="#aboutHeader">
-              About<i class="fas fa-solid fa-caret-down"></i
-            ></a>
+            <a href="about"> About<i class="fas fa-solid fa-caret-down"></i></a>
           </li>
-          <li><a href="#skilisHeader"> Skilis</a></li>
+          <li><a href="skilis"> Skilis</a></li>
           <li>
-            <a href="#projectHeader">
+            <a href="project">
               Project<i class="fas fa-solid fa-caret-down"></i
             ></a>
           </li>
           <li>
-            <a href="Download"
+            <a href=""
               >Download Resume <i class="fas fa-solid fa-caret-down"></i
             ></a>
             <div class="Resume">
@@ -71,7 +50,7 @@
               </ul>
             </div>
           </li>
-          <li><a href="#contactHeader"> Contact</a></li>
+          <li><a href="contact"> Contact</a></li>
         </ul>
         <input class="search-box" type="text" />
 
@@ -80,14 +59,14 @@
         </div>
       </div>
       <div class="dropdwon-menu">
-        <li><a href="#home"> Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skilis"> Service</a></li>
-        <li><a href="#project"> project</a></li>
+        <li><a href="home"> Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="skilis"> Service</a></li>
+        <li><a href="project"> project</a></li>
         <li>
           <a href="Image.index/CV_Alim.pdf">Download Resume</a>
         </li>
-        <li><a href="contact"> Contact</a></li>
+        <li><a href="#contact"> Contact</a></li>
       </div>
 
       <header class="home">
@@ -140,7 +119,7 @@
                 target="_blank"
               >
                 <img
-                  class="project"
+                  class="project-img"
                   src="Image.index/weather.png"
                   alt="weather"
                 />
@@ -158,7 +137,7 @@
                 target="_blank"
               >
                 <img
-                  class="project"
+                  class="project-img"
                   src="Image.index/Dashboard Login.jpg"
                   alt="Login"
                 />
@@ -175,7 +154,7 @@
                 target="_blank"
               >
                 <img
-                  class="project"
+                  class="project-img"
                   src="Image.index/SolarSystem.png"
                   alt="Mercury"
                 />
@@ -188,19 +167,31 @@
           </div>
           <div class="project-container">
             <div class="project-item">
-              <img src="" alt="Project 4" />
-              <h2>Project 4</h2>
-              <p>4</p>
+              <img
+                class="project-img"
+                src="./Image.index/imagetodo.png"
+                alt="todo"
+              />
+              <div class="projectIcon">
+                <img src="Image.index/HTML5.svg" />
+                <img src="Image.index/css3.png" />
+                <img src="Image.index/react.png" />
+                <img src="Image.index/Github.png" />
+              </div>
             </div>
             <div class="project-item">
-              <img src="" alt="Project 5" />
-              <h2>Project 5</h2>
-              <p>5</p>
+              <img
+                class="project-img"
+                src="./Image.index/InProgrees.png"
+                alt="InProgrees"
+              />
             </div>
             <div class="project-item">
-              <img src="" alt="Project 6" />
-              <h2>Project 6</h2>
-              <p>6</p>
+              <img
+                class="project-img"
+                src="./Image.index/InProgrees.png"
+                alt="InProgrees"
+              />
             </div>
           </div>
         </main>
@@ -329,39 +320,42 @@
             </div>
           </div>
           <div class="contactForum">
-            <form id="contactForum">
+            <form
+              target="_blank"
+              action="https://formsubmit.co/alim.basok.erk@gmail.com"
+              method="POST"
+            >
               <div class="field">
-                <label for="from_name">Full Name *</label>
+                <label name="name" for="name">Full Name *</label>
                 <input
                   type="text"
-                  name="from_name"
-                  id="from_name"
+                  name="name"
+                  id="name"
                   placeholder="Full name"
                   required="required"
                 />
               </div>
               <div class="field">
-                <label for="message">Message *</label>
+                <label name="message" for="message">Message *</label>
                 <input
                   type="text"
                   name="message"
                   id="message"
-                  placeholder=" Your Message"
+                  placeholder="Your Message"
                   required="required"
                 />
               </div>
               <div class="field">
-                <label for="reply_to">Reply-email *</label>
+                <label name="reply_to" for="reply_to">Email *</label>
                 <input
-                  type="text"
-                  name="reply_to"
+                  type="email"
+                  name="email"
                   id="reply_to"
                   placeholder="Email"
                   required="required"
                 />
               </div>
-
-              <input type="submit" id="button" value="Send Email" />
+              <button class="button" type="submit">Send</button>
             </form>
           </div>
 
@@ -372,7 +366,7 @@
           />
         </section>
       </header>
-      <footer>
+      <footer class="footer">
         <a
           href="https://www.linkedin.com/in/alim-erk-7582b6231/"
           target="_blank"
