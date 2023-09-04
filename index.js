@@ -143,3 +143,33 @@ document
     }
   });
 */
+
+/*window.addEventListener("scroll", () => {
+  const navBar = document.querySelector(".nav-bar");
+  if (window.scrollY > 100) {
+    navBar.classList.add("sticky");
+  } else {
+    navBar.classList.remove("sticky");
+  }
+});
+
+const navbar = document.querySelector(".nav-bar");
+let isMouseAtTop = false;
+
+document.addEventListener("scroll", () => {
+  // Check if the mouse is at the top of the page
+  if (isMouseAtTop) {
+    navbar.classList.add("show-navbar");
+  } else {
+    navbar.classList.remove("show-navbar");
+  }
+});
+
+// Track mouse position
+document.addEventListener("mousemove", (event) => {
+  if (event.clientY < 10) {
+    isMouseAtTop = true;
+  } else {
+    isMouseAtTop = false;
+  }
+});*/
