@@ -1,16 +1,19 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 body {
   min-width: 100vh;
   height: 100vh;
-
   background-size: cover;
   background-position: center;
 }
 img {
   height: 50px;
   width: 50px;
+  cursor: pointer;
+  margin-top: 3px;
 }
 li {
   list-style: none;
@@ -30,16 +33,18 @@ a:hover {
   /*position: sticky;
   top: 0;
   z-index: 100;*/
-  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #626262;
+  padding: 0 20px;
 }
 
-.nav-bar .links {
+.links {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
+  align-items: center;
 }
 .nav-bar .toggle_btn {
   color: white;
@@ -48,7 +53,9 @@ a:hover {
   display: none;
 }
 .nav-bar input {
-  background-color: #fff;
+  opacity: 0;
+}
+/*background-color: #fff;
   background-image: url("./Image.index/search.png");
   background-position: 0.75rem center;
   background-repeat: no-repeat;
@@ -64,7 +71,7 @@ a:hover {
 .nav-bar input:focus {
   width: 200px;
   padding: 0.75rem 0.75rem 0.75rem 2.5rem;
-}
+}*/
 
 .dropdwon-menu {
   display: none;
@@ -454,16 +461,19 @@ a:hover {
   width: 35px;
   height: 35px;
   margin: 0 5px;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 /* Define hover styles for .fa-brands */
-.projectIcon .fa-brands:hover {
+.projectIcon .fa-brands:hover,
+.project-item:hover .projectIcon .fa-brands {
   width: 50px;
   height: 50px;
 }
 
 /* Define hover styles for .fa-solid */
-.projectIcon .fa-solid:hover {
+.projectIcon .fa-solid:hover,
+.project-item:hover .projectIcon .fa-solid {
   width: 50px;
   height: 50px;
 }
